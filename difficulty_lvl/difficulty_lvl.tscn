@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1rg24nab81hh"]
+
+[ext_resource type="Script" path="res://difficulty_lvl/difficulty_lvl.gd" id="1_hw7ea"]
+[ext_resource type="Texture2D" uid="uid://do7wbt5grfkgk" path="res://res/bg_start.png" id="1_xiq5c"]
+[ext_resource type="Texture2D" uid="uid://dra2s7htctpr" path="res://res/rat_lvl.png" id="2_4xcva"]
+[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/EvilEmpire-4BBVK.ttf" id="3_tgoiw"]
+[ext_resource type="Texture2D" uid="uid://hcdqx0r60quu" path="res://res/cat_lvl.png" id="4_5tfcj"]
+[ext_resource type="Texture2D" uid="uid://47nqlnnnd0u8" path="res://res/100X50.png" id="4_eappq"]
+[ext_resource type="Texture2D" uid="uid://buwbpj5a2idic" path="res://res/dog_lvl.png" id="5_ma7q0"]
+
+[node name="difficulty_lvl" type="Node2D"]
+script = ExtResource("1_hw7ea")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(257.875, 414.987)
+scale = Vector2(1.12781, 1.13613)
+texture = ExtResource("1_xiq5c")
+
+[node name="Button_easy" type="Button" parent="."]
+offset_left = 84.0
+offset_top = 201.0
+offset_right = 432.0
+offset_bottom = 274.0
+icon = ExtResource("2_4xcva")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_easy"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 121.0
+offset_bottom = 61.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tgoiw")
+theme_override_font_sizes/normal_font_size = 41
+text = "Easy"
+
+[node name="Button_medium" type="Button" parent="."]
+offset_left = 84.0
+offset_top = 339.0
+offset_right = 432.0
+offset_bottom = 412.0
+icon = ExtResource("4_5tfcj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_medium"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 17.0
+offset_right = 163.0
+offset_bottom = 62.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tgoiw")
+theme_override_font_sizes/normal_font_size = 41
+text = "Medium"
+
+[node name="Button_hard" type="Button" parent="."]
+offset_left = 82.0
+offset_top = 457.0
+offset_right = 430.0
+offset_bottom = 530.0
+icon = ExtResource("5_ma7q0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_hard"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 12.0
+offset_right = 131.0
+offset_bottom = 57.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tgoiw")
+theme_override_font_sizes/normal_font_size = 41
+text = "hard"
+
+[node name="Button_back" type="Button" parent="."]
+offset_left = 59.0
+offset_top = 45.0
+offset_right = 167.0
+offset_bottom = 103.0
+icon = ExtResource("4_eappq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 98.0
+offset_bottom = 50.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_tgoiw")
+theme_override_font_sizes/normal_font_size = 26
+text = "<- back"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 17.0
+offset_top = 803.0
+offset_right = 161.0
+offset_bottom = 829.0
+theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
+text = "Now: difficulty_lvl"
+
+[connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]

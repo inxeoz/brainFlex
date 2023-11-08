@@ -1,0 +1,128 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdk7yi2bodgc2"]
+
+[ext_resource type="Texture2D" uid="uid://do7wbt5grfkgk" path="res://res/bg_start.png" id="1_qaq5e"]
+[ext_resource type="Script" path="res://profile/profile.gd" id="1_yq4dt"]
+[ext_resource type="Texture2D" uid="uid://b8xesirjk26pv" path="res://res/360X50.png" id="2_5fvw7"]
+[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/EvilEmpire-4BBVK.ttf" id="3_7c3gh"]
+[ext_resource type="Texture2D" uid="uid://47nqlnnnd0u8" path="res://res/100X50.png" id="4_axyhl"]
+
+[node name="profile" type="Node2D"]
+script = ExtResource("1_yq4dt")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(257.875, 414.987)
+scale = Vector2(1.12781, 1.13613)
+texture = ExtResource("1_qaq5e")
+
+[node name="Button_attempts" type="Button" parent="."]
+offset_left = 95.0
+offset_top = 256.0
+offset_right = 463.0
+offset_bottom = 314.0
+icon = ExtResource("2_5fvw7")
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_attempts"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 10.0
+offset_right = 209.0
+offset_bottom = 55.0
+theme_override_fonts/normal_font = ExtResource("3_7c3gh")
+theme_override_font_sizes/normal_font_size = 41
+text = "Attempts :"
+
+[node name="Attempts_value" type="RichTextLabel" parent="Button_attempts"]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 7.0
+offset_right = 257.0
+offset_bottom = 52.0
+theme_override_fonts/normal_font = ExtResource("3_7c3gh")
+theme_override_font_sizes/normal_font_size = 41
+text = "_"
+
+[node name="Button_achievements" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 338.0
+offset_right = 460.0
+offset_bottom = 396.0
+icon = ExtResource("2_5fvw7")
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_achievements"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 8.0
+offset_right = 285.0
+offset_bottom = 53.0
+theme_override_fonts/normal_font = ExtResource("3_7c3gh")
+theme_override_font_sizes/normal_font_size = 41
+text = "Achievements :"
+
+[node name="achievement_value" type="RichTextLabel" parent="Button_achievements"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 7.0
+offset_right = 324.0
+offset_bottom = 52.0
+theme_override_fonts/normal_font = ExtResource("3_7c3gh")
+theme_override_font_sizes/normal_font_size = 41
+text = "_"
+
+[node name="Button_Hint_status" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 427.0
+offset_right = 460.0
+offset_bottom = 485.0
+icon = ExtResource("2_5fvw7")
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_Hint_status"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 9.0
+offset_right = 350.0
+offset_bottom = 57.0
+theme_override_fonts/normal_font = ExtResource("3_7c3gh")
+theme_override_font_sizes/normal_font_size = 41
+text = "Hint status :"
+
+[node name="Hints_status_value" type="RichTextLabel" parent="Button_Hint_status"]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 6.0
+offset_right = 312.0
+offset_bottom = 51.0
+theme_override_fonts/normal_font = ExtResource("3_7c3gh")
+theme_override_font_sizes/normal_font_size = 41
+text = "_"
+
+[node name="Button_back" type="Button" parent="."]
+offset_left = 59.0
+offset_top = 45.0
+offset_right = 167.0
+offset_bottom = 103.0
+icon = ExtResource("4_axyhl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 98.0
+offset_bottom = 50.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_7c3gh")
+theme_override_font_sizes/normal_font_size = 26
+text = "<- back"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 17.0
+offset_top = 803.0
+offset_right = 139.0
+offset_bottom = 829.0
+theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
+text = "Now: profile"
+
+[connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]

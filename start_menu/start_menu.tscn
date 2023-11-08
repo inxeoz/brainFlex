@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4lll677dms8w"]
+
+[ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_bpiic"]
+[ext_resource type="Texture2D" uid="uid://do7wbt5grfkgk" path="res://res/bg_start.png" id="1_gn8ir"]
+[ext_resource type="Texture2D" uid="uid://dyd5dketbiuec" path="res://res/220X50.png" id="2_5itlu"]
+[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/EvilEmpire-4BBVK.ttf" id="3_alim3"]
+[ext_resource type="Texture2D" uid="uid://dm56a7i6x2lh2" path="res://res/dark_theme.png" id="4_3asb0"]
+[ext_resource type="Texture2D" uid="uid://c26duhqs6u4kf" path="res://res/setting_icon.png" id="5_x2k3b"]
+
+[node name="start_menu" type="Node2D"]
+script = ExtResource("1_bpiic")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(257.875, 414.987)
+scale = Vector2(1.12781, 1.13613)
+texture = ExtResource("1_gn8ir")
+
+[node name="Button_selectMode" type="Button" parent="."]
+offset_left = 149.0
+offset_top = 363.0
+offset_right = 379.0
+offset_bottom = 421.0
+icon = ExtResource("2_5itlu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_selectMode"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 16.0
+offset_right = 194.0
+offset_bottom = 46.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_alim3")
+theme_override_font_sizes/normal_font_size = 28
+text = "Select mode"
+
+[node name="Button_play" type="Button" parent="."]
+offset_left = 147.0
+offset_top = 456.0
+offset_right = 377.0
+offset_bottom = 514.0
+icon = ExtResource("2_5itlu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_play"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 18.0
+offset_right = 141.0
+offset_bottom = 48.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_alim3")
+theme_override_font_sizes/normal_font_size = 28
+text = "play"
+
+[node name="Button_exit" type="Button" parent="."]
+offset_left = 148.0
+offset_top = 544.0
+offset_right = 378.0
+offset_bottom = 602.0
+icon = ExtResource("2_5itlu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_exit"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 19.0
+offset_right = 136.0
+offset_bottom = 49.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_alim3")
+theme_override_font_sizes/normal_font_size = 28
+text = "Exit"
+
+[node name="Button_theme" type="Button" parent="."]
+offset_left = 47.0
+offset_top = 49.0
+offset_right = 115.0
+offset_bottom = 117.0
+icon = ExtResource("4_3asb0")
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_theme"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 56.0
+offset_bottom = 85.0
+theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
+theme_override_fonts/normal_font = ExtResource("3_alim3")
+text = "Theme"
+
+[node name="Button_settings" type="Button" parent="."]
+offset_left = 406.0
+offset_top = 47.0
+offset_right = 474.0
+offset_bottom = 115.0
+icon = ExtResource("5_x2k3b")
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_settings"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 71.0
+offset_right = 65.0
+offset_bottom = 92.0
+theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
+theme_override_fonts/normal_font = ExtResource("3_alim3")
+text = "settings"
+
+[connection signal="pressed" from="Button_selectMode" to="." method="_on_button_select_mode_pressed"]
+[connection signal="pressed" from="Button_play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="Button_exit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="Button_theme" to="." method="_on_button_theme_pressed"]
+[connection signal="pressed" from="Button_settings" to="." method="_on_button_settings_pressed"]

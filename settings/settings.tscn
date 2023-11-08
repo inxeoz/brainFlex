@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpcysyv0jipam"]
+
+[ext_resource type="Script" path="res://settings/settings.gd" id="1_nkf5g"]
+[ext_resource type="Texture2D" uid="uid://do7wbt5grfkgk" path="res://res/bg_start.png" id="2_6up3f"]
+[ext_resource type="Texture2D" uid="uid://b8xesirjk26pv" path="res://res/360X50.png" id="3_jy0qg"]
+[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/EvilEmpire-4BBVK.ttf" id="4_qbdxv"]
+[ext_resource type="Texture2D" uid="uid://c0k0835f21fnp" path="res://res/profile.png" id="5_eeuue"]
+[ext_resource type="Texture2D" uid="uid://47nqlnnnd0u8" path="res://res/100X50.png" id="6_7f0h3"]
+
+[node name="settings" type="Node2D"]
+script = ExtResource("1_nkf5g")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(257.875, 414.987)
+scale = Vector2(1.12781, 1.13613)
+texture = ExtResource("2_6up3f")
+
+[node name="Button_language" type="Button" parent="."]
+visible = false
+offset_left = 95.0
+offset_top = 256.0
+offset_right = 463.0
+offset_bottom = 314.0
+icon = ExtResource("3_jy0qg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_language"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 8.0
+offset_right = 302.0
+offset_bottom = 53.0
+theme_override_fonts/normal_font = ExtResource("4_qbdxv")
+theme_override_font_sizes/normal_font_size = 41
+text = "select language"
+
+[node name="Button_difficulty_lvl" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 338.0
+offset_right = 460.0
+offset_bottom = 396.0
+icon = ExtResource("3_jy0qg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_difficulty_lvl"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -3.0
+offset_right = 365.0
+offset_bottom = 59.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_qbdxv")
+theme_override_font_sizes/normal_font_size = 41
+text = "diffoculty lvl ->"
+
+[node name="Button_Hints" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 427.0
+offset_right = 460.0
+offset_bottom = 485.0
+icon = ExtResource("3_jy0qg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_Hints"]
+layout_mode = 0
+offset_left = 23.0
+offset_right = 214.0
+offset_bottom = 65.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_qbdxv")
+theme_override_font_sizes/normal_font_size = 41
+text = "Hints ->"
+
+[node name="Button_profile" type="Button" parent="."]
+offset_left = 426.0
+offset_top = 28.0
+offset_right = 494.0
+offset_bottom = 96.0
+icon = ExtResource("5_eeuue")
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_profile"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 68.0
+offset_right = 87.0
+offset_bottom = 108.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
+theme_override_fonts/normal_font = ExtResource("4_qbdxv")
+theme_override_font_sizes/normal_font_size = 28
+text = "profile"
+
+[node name="Button_back" type="Button" parent="."]
+offset_left = 59.0
+offset_top = 45.0
+offset_right = 167.0
+offset_bottom = 103.0
+icon = ExtResource("6_7f0h3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 98.0
+offset_bottom = 50.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_qbdxv")
+theme_override_font_sizes/normal_font_size = 26
+text = "<- back"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 17.0
+offset_top = 803.0
+offset_right = 139.0
+offset_bottom = 829.0
+theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
+text = "Now: settings"
+
+[connection signal="pressed" from="Button_difficulty_lvl" to="." method="_on_button_difficulty_lvl_pressed"]
+[connection signal="pressed" from="Button_Hints" to="." method="_on_button_hints_pressed"]
+[connection signal="pressed" from="Button_profile" to="." method="_on_button_profile_pressed"]
+[connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]

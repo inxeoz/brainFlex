@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://32tnej7s1ux7"]
+
+[ext_resource type="Texture2D" uid="uid://do7wbt5grfkgk" path="res://res/bg_start.png" id="1_0iv5t"]
+[ext_resource type="Script" path="res://select_mode/select_mode.gd" id="1_8tcus"]
+[ext_resource type="Texture2D" uid="uid://dyd5dketbiuec" path="res://res/220X50.png" id="2_3s4x8"]
+[ext_resource type="Texture2D" uid="uid://glfggq7n3cds" path="res://res/400X100.png" id="2_k24qo"]
+[ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/Valorax-lg25V.otf" id="3_oaaas"]
+[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/EvilEmpire-4BBVK.ttf" id="3_xdr4n"]
+[ext_resource type="Texture2D" uid="uid://47nqlnnnd0u8" path="res://res/100X50.png" id="4_di58f"]
+
+[node name="select_mode" type="Node2D"]
+script = ExtResource("1_8tcus")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(257.875, 414.987)
+scale = Vector2(1.12781, 1.13613)
+texture = ExtResource("1_0iv5t")
+
+[node name="Button_guess_the_number" type="Button" parent="."]
+offset_left = 58.0
+offset_top = 239.0
+offset_right = 466.0
+offset_bottom = 347.0
+icon = ExtResource("2_k24qo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_guess_the_number"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 36.0
+offset_right = 387.0
+offset_bottom = 74.0
+theme_override_fonts/normal_font = ExtResource("3_oaaas")
+theme_override_font_sizes/normal_font_size = 28
+text = "guess the number"
+
+[node name="Button_war_of_symbols" type="Button" parent="."]
+offset_left = 59.0
+offset_top = 376.0
+offset_right = 467.0
+offset_bottom = 484.0
+icon = ExtResource("2_k24qo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_war_of_symbols"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 36.0
+offset_right = 387.0
+offset_bottom = 74.0
+theme_override_fonts/normal_font = ExtResource("3_oaaas")
+theme_override_font_sizes/normal_font_size = 28
+text = "war of symbols"
+
+[node name="Button_next" type="Button" parent="."]
+offset_left = 148.0
+offset_top = 544.0
+offset_right = 378.0
+offset_bottom = 602.0
+icon = ExtResource("2_3s4x8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_next"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 13.0
+offset_right = 163.0
+offset_bottom = 53.0
+theme_override_fonts/normal_font = ExtResource("3_xdr4n")
+theme_override_font_sizes/normal_font_size = 28
+text = "next ->"
+
+[node name="Button_back" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 47.0
+offset_right = 145.0
+offset_bottom = 105.0
+icon = ExtResource("4_di58f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 98.0
+offset_bottom = 50.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_xdr4n")
+theme_override_font_sizes/normal_font_size = 26
+text = "<- back"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 17.0
+offset_top = 803.0
+offset_right = 165.0
+offset_bottom = 829.0
+theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
+text = "Now: select_mode"
+
+[connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
