@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://trhnjtln4rdp"
-path="res://.godot/imported/Valorax-lg25V.otf-71c917c6790f41d5bfe8bda7844dde8c.fontdata"
+path="res://.godot/imported/Valorax-lg25V.otf-2a79694949bc0dbdf1a3d86f1ee6ee4a.fontdata"
 
 [deps]
 
-source_file="res://res/Valorax-lg25V.otf"
-dest_files=["res://.godot/imported/Valorax-lg25V.otf-71c917c6790f41d5bfe8bda7844dde8c.fontdata"]
+source_file="res://res/font/Valorax-lg25V.otf"
+dest_files=["res://.godot/imported/Valorax-lg25V.otf-2a79694949bc0dbdf1a3d86f1ee6ee4a.fontdata"]
 
 [params]
 
@@ -27,7 +27,12 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}
