@@ -6,8 +6,8 @@ var profile = load("res://profile/profile.tscn");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	$Button_difficulty_lvl/ColorRect.color = DarkTheme.color5
+	$Button_Hints/ColorRect.color = DarkTheme.color5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -17,15 +17,20 @@ func _process(delta):
 func _on_button_back_pressed():
 	get_tree().change_scene_to_packed(start_menu)
 	
+func _on_button_difficulty_lvl_button_down():
+	$Button_difficulty_lvl/ColorRect.color = DarkTheme.color4
 
 
-func _on_button_difficulty_lvl_pressed():
-	get_tree().change_scene_to_packed(difficulty_lvl);
+func _on_button_difficulty_lvl_button_up():
+	_ready()
+	get_tree().change_scene_to_packed(difficulty_lvl)
 
 
-func _on_button_hints_pressed():
-	get_tree().change_scene_to_packed(hints);
+func _on_button_hints_button_down():
+	$Button_Hints/ColorRect.color = DarkTheme.color4
 
 
-func _on_button_profile_pressed():
-	get_tree().change_scene_to_packed(profile);
+func _on_button_hints_button_up():
+	_ready()
+	get_tree().change_scene_to_packed(hints)
+	

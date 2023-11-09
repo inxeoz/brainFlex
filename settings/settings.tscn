@@ -37,7 +37,8 @@ show_behind_parent = true
 layout_mode = 0
 offset_right = 370.0
 offset_bottom = 58.0
-color = Color(0.0745098, 0.2, 0.298039, 1)
+mouse_filter = 2
+color = Color(0, 0.341176, 0.572549, 1)
 
 [node name="Button_Hints" type="Button" parent="."]
 offset_left = 172.0
@@ -61,7 +62,8 @@ show_behind_parent = true
 layout_mode = 0
 offset_right = 370.0
 offset_bottom = 59.0
-color = Color(0.0745098, 0.2, 0.298039, 1)
+mouse_filter = 2
+color = Color(0, 0.341176, 0.572549, 1)
 
 [node name="Button_back" type="Button" parent="."]
 offset_left = 59.0
@@ -87,6 +89,7 @@ show_behind_parent = true
 layout_mode = 0
 offset_right = 114.0
 offset_bottom = 61.0
+mouse_filter = 2
 color = Color(0.992157, 0.372549, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -97,6 +100,7 @@ offset_bottom = 829.0
 theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
 text = "Now: settings"
 
-[connection signal="pressed" from="Button_difficulty_lvl" to="." method="_on_button_difficulty_lvl_pressed"]
-[connection signal="pressed" from="Button_Hints" to="." method="_on_button_hints_pressed"]
-[connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
+[connection signal="button_down" from="Button_difficulty_lvl" to="." method="_on_button_difficulty_lvl_button_down"]
+[connection signal="button_up" from="Button_difficulty_lvl" to="." method="_on_button_difficulty_lvl_button_up"]
+[connection signal="button_down" from="Button_Hints" to="." method="_on_button_hints_button_down"]
+[connection signal="button_up" from="Button_Hints" to="." method="_on_button_hints_button_up"]
