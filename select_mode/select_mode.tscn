@@ -1,11 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://32tnej7s1ux7"]
+[gd_scene load_steps=4 format=3 uid="uid://32tnej7s1ux7"]
 
-[ext_resource type="Texture2D" uid="uid://do7wbt5grfkgk" path="res://res/bg_start.png" id="1_0iv5t"]
-[ext_resource type="Texture2D" uid="uid://dyd5dketbiuec" path="res://res/220X50.png" id="2_3s4x8"]
-[ext_resource type="Texture2D" uid="uid://glfggq7n3cds" path="res://res/400X100.png" id="2_k24qo"]
-[ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/Valorax-lg25V.otf" id="3_oaaas"]
-[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/EvilEmpire-4BBVK.ttf" id="3_xdr4n"]
-[ext_resource type="Texture2D" uid="uid://47nqlnnnd0u8" path="res://res/100X50.png" id="4_di58f"]
+[ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="3_oaaas"]
+[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="3_xdr4n"]
 
 [sub_resource type="GDScript" id="GDScript_i0j14"]
 script/source = "extends Node2D
@@ -31,14 +27,12 @@ script = SubResource("GDScript_i0j14")
 [node name="Bg" type="Sprite2D" parent="."]
 position = Vector2(257.875, 414.987)
 scale = Vector2(1.12781, 1.13613)
-texture = ExtResource("1_0iv5t")
 
 [node name="Button_guess_the_number" type="Button" parent="."]
 offset_left = 58.0
 offset_top = 239.0
 offset_right = 466.0
 offset_bottom = 347.0
-icon = ExtResource("2_k24qo")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_guess_the_number"]
 layout_mode = 0
@@ -55,7 +49,6 @@ offset_left = 59.0
 offset_top = 376.0
 offset_right = 467.0
 offset_bottom = 484.0
-icon = ExtResource("2_k24qo")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_war_of_symbols"]
 layout_mode = 0
@@ -72,7 +65,6 @@ offset_left = 148.0
 offset_top = 544.0
 offset_right = 378.0
 offset_bottom = 602.0
-icon = ExtResource("2_3s4x8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_next"]
 layout_mode = 0
@@ -89,7 +81,6 @@ offset_left = 37.0
 offset_top = 47.0
 offset_right = 145.0
 offset_bottom = 105.0
-icon = ExtResource("4_di58f")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
 layout_mode = 0

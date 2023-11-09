@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1rg24nab81hh"]
+[gd_scene load_steps=6 format=3 uid="uid://d1rg24nab81hh"]
 
 [ext_resource type="Script" path="res://difficulty_lvl/difficulty_lvl.gd" id="1_hw7ea"]
-[ext_resource type="Texture2D" uid="uid://do7wbt5grfkgk" path="res://res/bg_start.png" id="1_xiq5c"]
 [ext_resource type="Texture2D" uid="uid://dra2s7htctpr" path="res://res/rat_lvl.png" id="2_4xcva"]
-[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/EvilEmpire-4BBVK.ttf" id="3_tgoiw"]
+[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="3_tgoiw"]
 [ext_resource type="Texture2D" uid="uid://hcdqx0r60quu" path="res://res/cat_lvl.png" id="4_5tfcj"]
-[ext_resource type="Texture2D" uid="uid://47nqlnnnd0u8" path="res://res/100X50.png" id="4_eappq"]
 [ext_resource type="Texture2D" uid="uid://buwbpj5a2idic" path="res://res/dog_lvl.png" id="5_ma7q0"]
 
 [node name="difficulty_lvl" type="Node2D"]
@@ -14,7 +12,6 @@ script = ExtResource("1_hw7ea")
 [node name="Bg" type="Sprite2D" parent="."]
 position = Vector2(257.875, 414.987)
 scale = Vector2(1.12781, 1.13613)
-texture = ExtResource("1_xiq5c")
 
 [node name="Button_easy" type="Button" parent="."]
 offset_left = 84.0
@@ -75,7 +72,6 @@ offset_left = 59.0
 offset_top = 45.0
 offset_right = 167.0
 offset_bottom = 103.0
-icon = ExtResource("4_eappq")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
 layout_mode = 0

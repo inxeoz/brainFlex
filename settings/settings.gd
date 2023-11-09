@@ -6,8 +6,8 @@ var profile = load("res://profile/profile.tscn");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Button_difficulty_lvl/ColorRect.color = DarkTheme.color5
-	$Button_Hints/ColorRect.color = DarkTheme.color5
+	$Button_difficulty_lvl/ColorRect.color = DarkTheme.color2
+	$Button_Hints/ColorRect.color = DarkTheme.color2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

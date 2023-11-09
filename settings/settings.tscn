@@ -104,3 +104,4 @@ text = "Now: settings"
 [connection signal="button_up" from="Button_difficulty_lvl" to="." method="_on_button_difficulty_lvl_button_up"]
 [connection signal="button_down" from="Button_Hints" to="." method="_on_button_hints_button_down"]
 [connection signal="button_up" from="Button_Hints" to="." method="_on_button_hints_button_up"]
+[connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]

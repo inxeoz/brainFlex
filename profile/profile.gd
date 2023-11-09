@@ -1,5 +1,5 @@
 extends Node2D
-var settings = load("res://settings/settings.tscn")
+var start_menu = load("res://start_menu/start_menu.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,4 +13,4 @@ func _process(delta):
 
 
 func _on_button_back_pressed():
-	get_tree().change_scene_to_packed(settings);
+	get_tree().change_scene_to_packed(start_menu);

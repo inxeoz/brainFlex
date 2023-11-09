@@ -149,3 +149,5 @@ text = "profile"
 [connection signal="button_up" from="button_play" to="." method="_on_button_play_button_up"]
 [connection signal="button_down" from="button_quit" to="." method="_on_button_quit_button_down"]
 [connection signal="button_up" from="button_quit" to="." method="_on_button_quit_button_up"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="profile" to="." method="_on_profile_pressed"]
