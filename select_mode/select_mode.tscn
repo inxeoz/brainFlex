@@ -130,4 +130,5 @@ text = "Now: select_mode"
 
 [connection signal="pressed" from="Button_guess_the_number" to="." method="_on_button_guess_the_number_pressed"]
 [connection signal="pressed" from="Button_war_of_symbols" to="." method="_on_button_war_of_symbols_pressed"]
+[connection signal="pressed" from="Button_next" to="." method="_on_button_next_pressed"]
 [connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
