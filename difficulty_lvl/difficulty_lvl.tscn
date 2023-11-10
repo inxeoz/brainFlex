@@ -1,77 +1,26 @@
 [gd_scene load_steps=6 format=3 uid="uid://d1rg24nab81hh"]
 
 [ext_resource type="Script" path="res://difficulty_lvl/difficulty_lvl.gd" id="1_hw7ea"]
-[ext_resource type="Texture2D" uid="uid://dra2s7htctpr" path="res://res/rat_lvl.png" id="2_4xcva"]
+[ext_resource type="Texture2D" uid="uid://by722qcnn3u00" path="res://res/rat.png" id="3_nq71l"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="3_tgoiw"]
-[ext_resource type="Texture2D" uid="uid://hcdqx0r60quu" path="res://res/cat_lvl.png" id="4_5tfcj"]
-[ext_resource type="Texture2D" uid="uid://buwbpj5a2idic" path="res://res/dog_lvl.png" id="5_ma7q0"]
+[ext_resource type="Texture2D" uid="uid://d00btd2hgahy1" path="res://res/cat.png" id="4_mpfig"]
+[ext_resource type="Texture2D" uid="uid://4pesfy3ouhqi" path="res://res/dog.png" id="5_fmqr7"]
 
 [node name="difficulty_lvl" type="Node2D"]
 script = ExtResource("1_hw7ea")
 
-[node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(257.875, 414.987)
-scale = Vector2(1.12781, 1.13613)
-
-[node name="Button_easy" type="Button" parent="."]
-offset_left = 84.0
-offset_top = 201.0
-offset_right = 432.0
-offset_bottom = 274.0
-icon = ExtResource("2_4xcva")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Button_easy"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 16.0
-offset_right = 121.0
-offset_bottom = 61.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_tgoiw")
-theme_override_font_sizes/normal_font_size = 41
-text = "Easy"
-
-[node name="Button_medium" type="Button" parent="."]
-offset_left = 84.0
-offset_top = 339.0
-offset_right = 432.0
-offset_bottom = 412.0
-icon = ExtResource("4_5tfcj")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Button_medium"]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 17.0
-offset_right = 163.0
-offset_bottom = 62.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_tgoiw")
-theme_override_font_sizes/normal_font_size = 41
-text = "Medium"
-
-[node name="Button_hard" type="Button" parent="."]
-offset_left = 82.0
-offset_top = 457.0
-offset_right = 430.0
-offset_bottom = 530.0
-icon = ExtResource("5_ma7q0")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Button_hard"]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 12.0
-offset_right = 131.0
-offset_bottom = 57.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_tgoiw")
-theme_override_font_sizes/normal_font_size = 41
-text = "hard"
+[node name="Color_bg" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.0745098, 0.2, 0.298039, 1)
 
 [node name="Button_back" type="Button" parent="."]
 offset_left = 59.0
 offset_top = 45.0
 offset_right = 167.0
 offset_bottom = 103.0
+flat = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
 layout_mode = 0
@@ -85,6 +34,14 @@ theme_override_fonts/normal_font = ExtResource("3_tgoiw")
 theme_override_font_sizes/normal_font_size = 26
 text = "<- back"
 
+[node name="ColorRect" type="ColorRect" parent="Button_back"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 58.0
+mouse_filter = 2
+color = Color(0.992157, 0.372549, 0, 1)
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 17.0
 offset_top = 803.0
@@ -93,4 +50,106 @@ offset_bottom = 829.0
 theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
 text = "Now: difficulty_lvl"
 
+[node name="Button_easy" type="Button" parent="."]
+offset_left = 152.0
+offset_top = 312.0
+offset_right = 568.0
+offset_bottom = 384.0
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Button_easy"]
+layout_mode = 0
+offset_right = 416.0
+offset_bottom = 72.0
+mouse_filter = 2
+color = Color(0.294118, 0.647059, 0.301961, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_easy"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 60.0
+scale = Vector2(1.02314, 1.0182)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tgoiw")
+theme_override_font_sizes/normal_font_size = 40
+text = "Easy"
+
+[node name="Sprite2D" type="Sprite2D" parent="Button_easy"]
+position = Vector2(380, 36)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_nq71l")
+
+[node name="Button_medium" type="Button" parent="."]
+offset_left = 152.0
+offset_top = 440.0
+offset_right = 568.0
+offset_bottom = 512.0
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Button_medium"]
+layout_mode = 0
+offset_right = 416.0
+offset_bottom = 72.0
+mouse_filter = 2
+color = Color(0.952941, 0.937255, 0.509804, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_medium"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 17.0
+offset_right = 145.0
+offset_bottom = 61.0
+scale = Vector2(1.02314, 1.0182)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tgoiw")
+theme_override_font_sizes/normal_font_size = 40
+text = "medium"
+
+[node name="Sprite2D" type="Sprite2D" parent="Button_medium"]
+position = Vector2(386, 36)
+scale = Vector2(0.110481, 0.119008)
+texture = ExtResource("4_mpfig")
+
+[node name="Button_hard" type="Button" parent="."]
+offset_left = 152.0
+offset_top = 568.0
+offset_right = 568.0
+offset_bottom = 640.0
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Button_hard"]
+layout_mode = 0
+offset_right = 416.0
+offset_bottom = 72.0
+mouse_filter = 2
+color = Color(0.941176, 0.756863, 0.352941, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_hard"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 19.0
+offset_right = 91.0
+offset_bottom = 62.0
+scale = Vector2(1.02314, 1.0182)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_tgoiw")
+theme_override_font_sizes/normal_font_size = 40
+text = "hard"
+
+[node name="Sprite2D" type="Sprite2D" parent="Button_hard"]
+position = Vector2(373, 36)
+scale = Vector2(0.127011, 0.127011)
+texture = ExtResource("5_fmqr7")
+
 [connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
+[connection signal="button_down" from="Button_easy" to="." method="_on_button_easy_button_down"]
+[connection signal="button_up" from="Button_easy" to="." method="_on_button_easy_button_up"]
+[connection signal="button_down" from="Button_medium" to="." method="_on_button_medium_button_down"]
+[connection signal="button_up" from="Button_medium" to="." method="_on_button_medium_button_up"]
+[connection signal="button_down" from="Button_hard" to="." method="_on_button_hard_button_down"]
+[connection signal="button_up" from="Button_hard" to="." method="_on_button_hard_button_up"]

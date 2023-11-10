@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dra2s7htctpr"
-path="res://.godot/imported/rat_lvl.png-49ea25ca99090dbd184a3d0f99b0ec3d.ctex"
+uid="uid://d00btd2hgahy1"
+path="res://.godot/imported/cat.png-9fa85505583e4abd3bd858b857ce21ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/rat_lvl.png"
-dest_files=["res://.godot/imported/rat_lvl.png-49ea25ca99090dbd184a3d0f99b0ec3d.ctex"]
+source_file="res://res/cat.png"
+dest_files=["res://.godot/imported/cat.png-9fa85505583e4abd3bd858b857ce21ae.ctex"]
 
 [params]
 
