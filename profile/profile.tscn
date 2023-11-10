@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://profile/profile.gd" id="1_yq4dt"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="3_7c3gh"]
-[ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="3_12jwx"]
+[ext_resource type="FontFile" uid="uid://cyx4rfsvf0sxf" path="res://res/font/NightPumpkind-1GpGv.ttf" id="3_niloq"]
 
 [node name="profile" type="Node2D"]
 script = ExtResource("1_yq4dt")
@@ -51,39 +51,24 @@ offset_bottom = 58.0
 mouse_filter = 2
 color = Color(0.992157, 0.372549, 0, 1)
 
-[node name="Attempts" type="ColorRect" parent="."]
-offset_left = 152.0
-offset_top = 444.0
-offset_right = 586.0
-offset_bottom = 518.0
-color = Color(0.964706, 0.964706, 0.913725, 1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Attempts"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 12.0
-offset_right = 385.0
-offset_bottom = 69.0
-theme_override_colors/default_color = Color(0.0745098, 0.2, 0.298039, 1)
-theme_override_fonts/normal_font = ExtResource("3_12jwx")
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 51.0
+offset_top = 220.0
+offset_right = 416.0
+offset_bottom = 277.0
+theme_override_colors/default_color = Color(0.964706, 0.964706, 0.913725, 1)
+theme_override_fonts/normal_font = ExtResource("3_niloq")
 theme_override_font_sizes/normal_font_size = 45
 text = "Attempts :"
 
-[node name="hint_status" type="ColorRect" parent="."]
-offset_left = 160.0
-offset_top = 653.0
-offset_right = 594.0
-offset_bottom = 727.0
-color = Color(0.964706, 0.964706, 0.913725, 1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="hint_status"]
-offset_left = 20.0
-offset_top = 12.0
-offset_right = 385.0
-offset_bottom = 69.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_12jwx")
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 45.0
+offset_top = 346.0
+offset_right = 410.0
+offset_bottom = 403.0
+theme_override_colors/default_color = Color(0.964706, 0.964706, 0.913725, 1)
+theme_override_fonts/normal_font = ExtResource("3_niloq")
 theme_override_font_sizes/normal_font_size = 45
-text = "Attempts :"
+text = "hint status:"
 
 [connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
