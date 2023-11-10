@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bt5xq8ojsgw8"]
+[gd_scene load_steps=6 format=3 uid="uid://bt5xq8ojsgw8"]
 
 [ext_resource type="Script" path="res://guess_the_number/guess_the_number.gd" id="1_8u2vg"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_lxiho"]
+[ext_resource type="Script" path="res://guess_the_number/Button_8.gd" id="5_ef0so"]
 [ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="6_yq4ic"]
 [ext_resource type="Script" path="res://guess_the_number/gtn_keyboard.gd" id="8_x88lc"]
 
@@ -447,6 +448,7 @@ offset_top = 704.0
 offset_right = 324.0
 offset_bottom = 772.0
 flat = true
+script = ExtResource("5_ef0so")
 
 [node name="value_8" type="RichTextLabel" parent="keyboard/Button_8"]
 layout_mode = 0
@@ -464,6 +466,7 @@ text = "8"
 show_behind_parent = true
 offset_right = 68.0
 offset_bottom = 68.0
+mouse_filter = 2
 color = Color(0.0980392, 0.654902, 0.807843, 1)
 
 [node name="Button_9" type="Button" parent="keyboard"]
@@ -489,6 +492,7 @@ text = "9"
 show_behind_parent = true
 offset_right = 68.0
 offset_bottom = 68.0
+mouse_filter = 2
 color = Color(0.0980392, 0.654902, 0.807843, 1)
 
 [node name="Button_backSpace" type="Button" parent="keyboard"]
@@ -563,6 +567,7 @@ text = "Enter"
 show_behind_parent = true
 offset_right = 108.0
 offset_bottom = 57.0
+mouse_filter = 2
 color = Color(0.0980392, 0.654902, 0.807843, 1)
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
@@ -574,16 +579,5 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
 text = "="
 
-[connection signal="pressed" from="keyboard/Button_0" to="keyboard" method="_on_button_0_pressed"]
-[connection signal="pressed" from="keyboard/Button_1" to="keyboard" method="_on_button_1_pressed"]
-[connection signal="pressed" from="keyboard/Button_2" to="keyboard" method="_on_button_2_pressed"]
-[connection signal="pressed" from="keyboard/Button_3" to="keyboard" method="_on_button_3_pressed"]
-[connection signal="pressed" from="keyboard/Button_4" to="keyboard" method="_on_button_4_pressed"]
-[connection signal="pressed" from="keyboard/Button_5" to="keyboard" method="_on_button_5_pressed"]
-[connection signal="pressed" from="keyboard/Button_6" to="keyboard" method="_on_button_6_pressed"]
-[connection signal="pressed" from="keyboard/Button_7" to="keyboard" method="_on_button_7_pressed"]
-[connection signal="pressed" from="keyboard/Button_8" to="keyboard" method="_on_button_8_pressed"]
-[connection signal="pressed" from="keyboard/Button_9" to="keyboard" method="_on_button_9_pressed"]
-[connection signal="pressed" from="keyboard/Button_backSpace" to="keyboard" method="_on_button_back_space_pressed"]
-[connection signal="pressed" from="keyboard/Button_display" to="keyboard" method="_on_button_display_pressed"]
-[connection signal="pressed" from="keyboard/Button_enter" to="keyboard" method="_on_button_enter_pressed"]
+[connection signal="press" from="keyboard/Button_8" to="keyboard" method="_on_button_8_press"]
+[connection signal="pressed" from="keyboard/Button_8" to="keyboard/Button_8" method="_on_pressed"]

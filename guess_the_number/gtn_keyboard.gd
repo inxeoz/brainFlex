@@ -1,9 +1,18 @@
 extends Node2D
-
+var buttons_color = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	buttons_color.append($Button_0/ColorRect)
+	buttons_color.append($Button_1/ColorRect)
+	buttons_color.append($Button_2/ColorRect)
+	buttons_color.append($Button_3/ColorRect)
+	buttons_color.append($Button_4/ColorRect)
+	buttons_color.append($Button_5/ColorRect)
+	buttons_color.append($Button_6/ColorRect)
+	buttons_color.append($Button_7/ColorRect)
+	buttons_color.append($Button_8/ColorRect)
+	buttons_color.append($Button_9/ColorRect)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -11,53 +20,6 @@ func _process(delta):
 	pass
 
 
-func _on_button_enter_pressed():
-	pass # Replace with function body.
 
-
-func _on_button_display_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_back_space_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_9_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_8_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_7_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_6_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_5_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_4_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_3_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_2_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_1_pressed():
-	pass # Replace with function body.
-
-
-func _on_button_0_pressed():
-	pass # Replace with function body.
+func _on_button_8_press(p):
+	print(" i got ", p)
