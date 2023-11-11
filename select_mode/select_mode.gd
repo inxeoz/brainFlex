@@ -12,7 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(" hii ", gtn.get_class())
+	pass
 
 
 func _on_button_back_pressed():
