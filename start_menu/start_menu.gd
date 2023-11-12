@@ -6,7 +6,6 @@ var select_mode = load("res://select_mode/select_mode.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Color_bg.color = DarkTheme.color1
-	$button_select_mode/ColorRect.color = DarkTheme.color2
 	$button_play/ColorRect.color = DarkTheme.color2
 	$button_quit/ColorRect.color = DarkTheme.color2
 
@@ -14,11 +13,6 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_button_select_mode_button_up():
-	#$button_select_mode/ColorRect.color = DarkTheme.color4
-	_ready()
-	get_tree().change_scene_to_packed(select_mode)
-	
 
 
 func _on_button_select_mode_button_down():
@@ -30,8 +24,8 @@ func _on_button_play_button_down():
 
 
 func _on_button_play_button_up():
-	#$button_play/ColorRect.color = DarkTheme.color4
 	_ready()
+	get_tree().change_scene_to_packed(select_mode)
 	
 
 

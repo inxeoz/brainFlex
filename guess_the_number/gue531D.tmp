@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt5xq8ojsgw8"]
+[gd_scene load_steps=8 format=3 uid="uid://bt5xq8ojsgw8"]
 
 [ext_resource type="Script" path="res://guess_the_number/guess_the_number.gd" id="1_8u2vg"]
 [ext_resource type="FontFile" uid="uid://bs07gh5npwlpu" path="res://res/font/NoizeSportFreeVertionRegular-MVwye.ttf" id="2_tin5u"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_lxiho"]
 [ext_resource type="Script" path="res://guess_the_number/Timer.gd" id="6_eswyv"]
 [ext_resource type="Texture2D" uid="uid://htnetdhbp2y7" path="res://res/timer.png" id="6_r6u3i"]
-[ext_resource type="Script" path="res://gtn_global.gd" id="6_sks05"]
 [ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="6_yq4ic"]
 [ext_resource type="Script" path="res://guess_the_number/gtn_keyboard.gd" id="8_x88lc"]
 
@@ -257,7 +256,6 @@ offset_top = 512.0
 offset_right = 200.0
 offset_bottom = 580.0
 flat = true
-script = ExtResource("6_sks05")
 
 [node name="value_1" type="RichTextLabel" parent="keyboard/Button_1"]
 layout_mode = 0
@@ -522,16 +520,22 @@ offset_bottom = 57.0
 mouse_filter = 2
 color = Color(0.0980392, 0.654902, 0.807843, 1)
 
-[node name="color_display" type="ColorRect" parent="keyboard"]
-show_behind_parent = true
+[node name="Button_display" type="Button" parent="keyboard"]
 offset_left = 128.0
 offset_top = 385.0
 offset_right = 452.0
 offset_bottom = 443.0
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="keyboard/Button_display"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 324.0
+offset_bottom = 58.0
 mouse_filter = 2
 color = Color(0.458824, 0.458824, 0.458824, 1)
 
-[node name="value_display_value" type="RichTextLabel" parent="keyboard/color_display"]
+[node name="value_display_value" type="RichTextLabel" parent="keyboard/Button_display"]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 15.0
@@ -629,6 +633,7 @@ text = ":"
 [connection signal="pressed" from="keyboard/Button_8" to="keyboard" method="_on_button_8_pressed"]
 [connection signal="pressed" from="keyboard/Button_9" to="keyboard" method="_on_button_9_pressed"]
 [connection signal="pressed" from="keyboard/Button_backSpace" to="keyboard" method="_on_button_back_space_pressed"]
+[connection signal="pressed" from="keyboard/Button_display" to="keyboard" method="_on_button_display_pressed"]
 [connection signal="pressed" from="keyboard/Button_enter" to="keyboard" method="_on_button_enter_pressed"]
 [connection signal="time_passed" from="Timer" to="." method="_on_timer_time_passed"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

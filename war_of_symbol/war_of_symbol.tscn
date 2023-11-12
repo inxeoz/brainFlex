@@ -1,30 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4w4mjinw6gid"]
+[gd_scene load_steps=5 format=3 uid="uid://b4w4mjinw6gid"]
 
 [ext_resource type="Script" path="res://war_of_symbol/war_of_symbol.gd" id="1_346ir"]
-[ext_resource type="Texture2D" uid="uid://do7wbt5grfkgk" path="res://res/bg_start.png" id="2_brg3n"]
-[ext_resource type="Texture2D" uid="uid://47nqlnnnd0u8" path="res://res/100X50.png" id="3_py3wy"]
-[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/EvilEmpire-4BBVK.ttf" id="4_om06s"]
-[ext_resource type="Texture2D" uid="uid://br5hpb2hmt5i4" path="res://res/60X60_ora.png" id="5_1yd0c"]
-[ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/Valorax-lg25V.otf" id="6_h7l32"]
-[ext_resource type="Texture2D" uid="uid://blkhihn26yrb8" path="res://res/60X60_green.png" id="7_14hxw"]
+[ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_om06s"]
+[ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="6_h7l32"]
 [ext_resource type="Script" path="res://war_of_symbol/wos_keyboard.gd" id="8_gubft"]
-[ext_resource type="Texture2D" uid="uid://b3dvutqa8wowg" path="res://res/60X60_blue.png" id="9_3vsgu"]
-[ext_resource type="Texture2D" uid="uid://8iefgt0u46nk" path="res://res/100X50_blue.png" id="10_87ypa"]
 
 [node name="war_of_symbol" type="Node2D"]
 script = ExtResource("1_346ir")
-
-[node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(257.875, 414.987)
-scale = Vector2(1.12781, 1.13613)
-texture = ExtResource("2_brg3n")
 
 [node name="Button_back" type="Button" parent="."]
 offset_left = 26.0
 offset_top = 39.0
 offset_right = 134.0
 offset_bottom = 97.0
-icon = ExtResource("3_py3wy")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
 layout_mode = 0
@@ -52,7 +40,6 @@ offset_left = 25.0
 offset_top = 204.0
 offset_right = 93.0
 offset_bottom = 272.0
-icon = ExtResource("5_1yd0c")
 
 [node name="value_num1" type="RichTextLabel" parent="Button_num1"]
 layout_mode = 0
@@ -70,7 +57,6 @@ offset_left = 366.0
 offset_top = 40.0
 offset_right = 474.0
 offset_bottom = 98.0
-icon = ExtResource("3_py3wy")
 
 [node name="value_score" type="RichTextLabel" parent="Button_score"]
 layout_mode = 0
@@ -100,7 +86,6 @@ offset_top = 213.0
 offset_right = 170.0
 offset_bottom = 281.0
 scale = Vector2(0.8, 0.8)
-icon = ExtResource("7_14hxw")
 
 [node name="value_sym" type="RichTextLabel" parent="Button_num2"]
 layout_mode = 0
@@ -118,7 +103,6 @@ offset_left = 163.0
 offset_top = 205.0
 offset_right = 231.0
 offset_bottom = 273.0
-icon = ExtResource("5_1yd0c")
 
 [node name="value_num2" type="RichTextLabel" parent="Button_num3"]
 layout_mode = 0
@@ -137,7 +121,6 @@ offset_top = 212.0
 offset_right = 310.0
 offset_bottom = 280.0
 scale = Vector2(0.8, 0.8)
-icon = ExtResource("7_14hxw")
 
 [node name="value_sym2" type="RichTextLabel" parent="Button_num4"]
 layout_mode = 0
@@ -155,7 +138,6 @@ offset_left = 305.0
 offset_top = 206.0
 offset_right = 373.0
 offset_bottom = 274.0
-icon = ExtResource("5_1yd0c")
 
 [node name="value_num3" type="RichTextLabel" parent="Button_num5"]
 layout_mode = 0
@@ -173,7 +155,6 @@ offset_left = 444.0
 offset_top = 207.0
 offset_right = 512.0
 offset_bottom = 275.0
-icon = ExtResource("5_1yd0c")
 
 [node name="value_num4" type="RichTextLabel" parent="Button_num6"]
 layout_mode = 0
@@ -194,7 +175,6 @@ offset_left = 126.0
 offset_top = 413.0
 offset_right = 194.0
 offset_bottom = 481.0
-icon = ExtResource("9_3vsgu")
 
 [node name="value_a" type="RichTextLabel" parent="keyboard/Button_a"]
 layout_mode = 0
@@ -212,7 +192,6 @@ offset_left = 233.0
 offset_top = 413.0
 offset_right = 301.0
 offset_bottom = 481.0
-icon = ExtResource("9_3vsgu")
 
 [node name="value_s" type="RichTextLabel" parent="keyboard/Button_s"]
 layout_mode = 0
@@ -230,7 +209,6 @@ offset_left = 128.0
 offset_top = 504.0
 offset_right = 196.0
 offset_bottom = 572.0
-icon = ExtResource("9_3vsgu")
 
 [node name="value_m" type="RichTextLabel" parent="keyboard/Button_m"]
 layout_mode = 0
@@ -248,7 +226,6 @@ offset_left = 234.0
 offset_top = 505.0
 offset_right = 302.0
 offset_bottom = 573.0
-icon = ExtResource("9_3vsgu")
 
 [node name="value_d" type="RichTextLabel" parent="keyboard/Button__d"]
 layout_mode = 0
@@ -266,7 +243,6 @@ offset_left = 333.0
 offset_top = 418.0
 offset_right = 441.0
 offset_bottom = 476.0
-icon = ExtResource("10_87ypa")
 
 [node name="value_backspace" type="RichTextLabel" parent="keyboard/Button_backSpace"]
 layout_mode = 0
@@ -284,7 +260,6 @@ offset_left = 334.0
 offset_top = 514.0
 offset_right = 442.0
 offset_bottom = 572.0
-icon = ExtResource("10_87ypa")
 
 [node name="value_enter" type="RichTextLabel" parent="keyboard/Button_enter"]
 layout_mode = 0
@@ -305,3 +280,5 @@ offset_bottom = 266.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 26
 text = "="
+
+[connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
