@@ -18,7 +18,6 @@ func _on_timer_timeout():
 	button_color_node.color = color_normal
 	$Timer.stop()
 
-
 func _on_button_0_pressed():
 	each_button_func($Button_0/ColorRect, "0")
 	

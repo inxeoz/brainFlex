@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt5xq8ojsgw8"]
+[gd_scene load_steps=7 format=3 uid="uid://bt5xq8ojsgw8"]
 
 [ext_resource type="Script" path="res://guess_the_number/guess_the_number.gd" id="1_8u2vg"]
 [ext_resource type="FontFile" uid="uid://bs07gh5npwlpu" path="res://res/font/NoizeSportFreeVertionRegular-MVwye.ttf" id="2_tin5u"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_lxiho"]
-[ext_resource type="Script" path="res://guess_the_number/Timer.gd" id="6_eswyv"]
 [ext_resource type="Texture2D" uid="uid://htnetdhbp2y7" path="res://res/timer.png" id="6_r6u3i"]
-[ext_resource type="Script" path="res://gtn_global.gd" id="6_sks05"]
 [ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="6_yq4ic"]
 [ext_resource type="Script" path="res://guess_the_number/gtn_keyboard.gd" id="8_x88lc"]
 
@@ -18,7 +16,7 @@ offset_right = 720.0
 offset_bottom = 1280.0
 color = Color(0.0470588, 0.207843, 0.415686, 1)
 
-[node name="num_color1" type="ColorRect" parent="."]
+[node name="box1" type="ColorRect" parent="."]
 show_behind_parent = true
 offset_left = 56.0
 offset_top = 192.0
@@ -26,79 +24,19 @@ offset_right = 124.0
 offset_bottom = 260.0
 color = Color(0.372549, 0.815686, 0.407843, 1)
 
-[node name="value" type="RichTextLabel" parent="num_color1"]
+[node name="value" type="RichTextLabel" parent="box1"]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 23.0
-offset_right = 64.0
-offset_bottom = 54.0
+offset_right = 72.0
+offset_bottom = 68.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_lxiho")
 theme_override_font_sizes/normal_font_size = 27
 text = "1233"
 
-[node name="num_color2" type="ColorRect" parent="."]
-show_behind_parent = true
-offset_left = 240.0
-offset_top = 192.0
-offset_right = 308.0
-offset_bottom = 260.0
-color = Color(0.372549, 0.815686, 0.407843, 1)
-
-[node name="value" type="RichTextLabel" parent="num_color2"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 22.0
-offset_right = 61.0
-offset_bottom = 53.0
-mouse_filter = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_lxiho")
-theme_override_font_sizes/normal_font_size = 27
-text = "1233"
-
-[node name="num_color3" type="ColorRect" parent="."]
-show_behind_parent = true
-offset_left = 422.0
-offset_top = 192.0
-offset_right = 490.0
-offset_bottom = 260.0
-color = Color(0.372549, 0.815686, 0.407843, 1)
-
-[node name="value" type="RichTextLabel" parent="num_color3"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 22.0
-offset_right = 61.0
-offset_bottom = 53.0
-mouse_filter = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_lxiho")
-theme_override_font_sizes/normal_font_size = 27
-text = "1233"
-
-[node name="num_color4" type="ColorRect" parent="."]
-show_behind_parent = true
-offset_left = 576.0
-offset_top = 192.0
-offset_right = 644.0
-offset_bottom = 260.0
-color = Color(0.372549, 0.815686, 0.407843, 1)
-
-[node name="value" type="RichTextLabel" parent="num_color4"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 22.0
-offset_right = 61.0
-offset_bottom = 53.0
-mouse_filter = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_lxiho")
-theme_override_font_sizes/normal_font_size = 27
-text = "1233"
-
-[node name="op_color1" type="ColorRect" parent="."]
+[node name="box2" type="ColorRect" parent="."]
 show_behind_parent = true
 offset_left = 144.0
 offset_top = 192.0
@@ -106,18 +44,38 @@ offset_right = 212.0
 offset_bottom = 260.0
 color = Color(0.0980392, 0.654902, 0.807843, 1)
 
-[node name="value" type="RichTextLabel" parent="op_color1"]
+[node name="value" type="RichTextLabel" parent="box2"]
 layout_mode = 0
-offset_left = 23.75
-offset_top = 11.25
-offset_right = 44.75
-offset_bottom = 66.25
+offset_left = 24.0
+offset_top = 11.0
+offset_right = 68.0
+offset_bottom = 68.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "+"
 
-[node name="op_color2" type="ColorRect" parent="."]
+[node name="box3" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 240.0
+offset_top = 192.0
+offset_right = 308.0
+offset_bottom = 260.0
+color = Color(0.372549, 0.815686, 0.407843, 1)
+
+[node name="value" type="RichTextLabel" parent="box3"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 72.0
+offset_bottom = 60.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_lxiho")
+theme_override_font_sizes/normal_font_size = 27
+text = "1233"
+
+[node name="box4" type="ColorRect" parent="."]
 show_behind_parent = true
 offset_left = 336.0
 offset_top = 192.0
@@ -125,16 +83,56 @@ offset_right = 404.0
 offset_bottom = 260.0
 color = Color(0.0980392, 0.654902, 0.807843, 1)
 
-[node name="value" type="RichTextLabel" parent="op_color2"]
+[node name="value" type="RichTextLabel" parent="box4"]
 layout_mode = 0
-offset_left = 23.75
-offset_top = 11.25
-offset_right = 44.75
-offset_bottom = 66.25
+offset_left = 24.0
+offset_top = 11.0
+offset_right = 56.0
+offset_bottom = 68.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "+"
+
+[node name="box5" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 422.0
+offset_top = 192.0
+offset_right = 490.0
+offset_bottom = 260.0
+color = Color(0.372549, 0.815686, 0.407843, 1)
+
+[node name="value" type="RichTextLabel" parent="box5"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 68.0
+offset_bottom = 68.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_lxiho")
+theme_override_font_sizes/normal_font_size = 27
+text = "1233"
+
+[node name="box6" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 576.0
+offset_top = 192.0
+offset_right = 644.0
+offset_bottom = 260.0
+color = Color(0.372549, 0.815686, 0.407843, 1)
+
+[node name="value" type="RichTextLabel" parent="box6"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 68.0
+offset_bottom = 68.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_lxiho")
+theme_override_font_sizes/normal_font_size = 27
+text = "1233"
 
 [node name="score_color" type="ColorRect" parent="."]
 show_behind_parent = true
@@ -257,7 +255,6 @@ offset_top = 512.0
 offset_right = 200.0
 offset_bottom = 580.0
 flat = true
-script = ExtResource("6_sks05")
 
 [node name="value_1" type="RichTextLabel" parent="keyboard/Button_1"]
 layout_mode = 0
@@ -580,7 +577,6 @@ theme_override_font_sizes/normal_font_size = 37
 text = "="
 
 [node name="Timer" type="Timer" parent="."]
-script = ExtResource("6_eswyv")
 
 [node name="Stopwatch" type="Sprite2D" parent="Timer"]
 position = Vector2(616, 336)
@@ -630,5 +626,4 @@ text = ":"
 [connection signal="pressed" from="keyboard/Button_9" to="keyboard" method="_on_button_9_pressed"]
 [connection signal="pressed" from="keyboard/Button_backSpace" to="keyboard" method="_on_button_back_space_pressed"]
 [connection signal="pressed" from="keyboard/Button_enter" to="keyboard" method="_on_button_enter_pressed"]
-[connection signal="time_passed" from="Timer" to="." method="_on_timer_time_passed"]
-[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

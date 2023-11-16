@@ -15,15 +15,6 @@ offset_right = 745.0
 offset_bottom = 1319.0
 color = Color(0.0745098, 0.2, 0.298039, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-visible = false
-offset_left = 17.0
-offset_top = 803.0
-offset_right = 139.0
-offset_bottom = 829.0
-theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
-text = "Now: profile"
-
 [node name="Button_back" type="Button" parent="."]
 offset_left = 59.0
 offset_top = 45.0
@@ -51,24 +42,42 @@ offset_bottom = 58.0
 mouse_filter = 2
 color = Color(0.992157, 0.372549, 0, 1)
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+[node name="attempts_text" type="RichTextLabel" parent="."]
 offset_left = 51.0
 offset_top = 220.0
-offset_right = 416.0
+offset_right = 226.0
 offset_bottom = 277.0
 theme_override_colors/default_color = Color(0.964706, 0.964706, 0.913725, 1)
 theme_override_fonts/normal_font = ExtResource("3_niloq")
 theme_override_font_sizes/normal_font_size = 45
 text = "Attempts :"
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+[node name="attempts_value" type="RichTextLabel" parent="."]
+offset_left = 226.0
+offset_top = 220.0
+offset_right = 401.0
+offset_bottom = 277.0
+theme_override_colors/default_color = Color(0.964706, 0.964706, 0.913725, 1)
+theme_override_fonts/normal_font = ExtResource("3_niloq")
+theme_override_font_sizes/normal_font_size = 45
+
+[node name="hint_status_text" type="RichTextLabel" parent="."]
 offset_left = 45.0
 offset_top = 346.0
-offset_right = 410.0
+offset_right = 336.0
 offset_bottom = 403.0
 theme_override_colors/default_color = Color(0.964706, 0.964706, 0.913725, 1)
 theme_override_fonts/normal_font = ExtResource("3_niloq")
 theme_override_font_sizes/normal_font_size = 45
-text = "hint status:"
+text = "hint status :"
+
+[node name="hint_status_value" type="RichTextLabel" parent="."]
+offset_left = 256.0
+offset_top = 344.0
+offset_right = 431.0
+offset_bottom = 401.0
+theme_override_colors/default_color = Color(0.964706, 0.964706, 0.913725, 1)
+theme_override_fonts/normal_font = ExtResource("3_niloq")
+theme_override_font_sizes/normal_font_size = 45
 
 [connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]

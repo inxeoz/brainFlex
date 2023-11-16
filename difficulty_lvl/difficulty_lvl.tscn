@@ -147,9 +147,6 @@ scale = Vector2(0.127011, 0.127011)
 texture = ExtResource("5_fmqr7")
 
 [connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
-[connection signal="button_down" from="Button_easy" to="." method="_on_button_easy_button_down"]
-[connection signal="button_up" from="Button_easy" to="." method="_on_button_easy_button_up"]
-[connection signal="button_down" from="Button_medium" to="." method="_on_button_medium_button_down"]
-[connection signal="button_up" from="Button_medium" to="." method="_on_button_medium_button_up"]
-[connection signal="button_down" from="Button_hard" to="." method="_on_button_hard_button_down"]
-[connection signal="button_up" from="Button_hard" to="." method="_on_button_hard_button_up"]
+[connection signal="pressed" from="Button_easy" to="." method="_on_button_easy_pressed"]
+[connection signal="pressed" from="Button_medium" to="." method="_on_button_medium_pressed"]
+[connection signal="pressed" from="Button_hard" to="." method="_on_button_hard_pressed"]

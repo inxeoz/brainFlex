@@ -4,7 +4,11 @@ var start_menu = load("res://start_menu/start_menu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$attempts_value.text = str(Global.attempts)
+	if Global.hint_status_on:
+		$hint_status_value.text ="on"
+	else:
+		$hint_status_value.text = "off"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
