@@ -1,18 +1,81 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4w4mjinw6gid"]
+[gd_scene load_steps=7 format=3 uid="uid://batsmq2a7tsa7"]
 
 [ext_resource type="Script" path="res://war_of_symbol/war_of_symbol.gd" id="1_346ir"]
+[ext_resource type="FontFile" uid="uid://bs07gh5npwlpu" path="res://res/font/NoizeSportFreeVertionRegular-MVwye.ttf" id="4_8toha"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_om06s"]
+[ext_resource type="Texture2D" uid="uid://htnetdhbp2y7" path="res://res/timer.png" id="6_1rwhw"]
 [ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="6_h7l32"]
 [ext_resource type="Script" path="res://war_of_symbol/wos_keyboard.gd" id="8_gubft"]
 
 [node name="war_of_symbol" type="Node2D"]
 script = ExtResource("1_346ir")
 
+[node name="Color_bg" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.0470588, 0.207843, 0.415686, 1)
+
+[node name="score_color" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 533.0
+offset_top = 39.0
+offset_right = 641.0
+offset_bottom = 97.0
+color = Color(0.00392157, 0.454902, 0.745098, 1)
+
+[node name="score_text" type="RichTextLabel" parent="score_color"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 61.0
+offset_right = 94.0
+offset_bottom = 82.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("6_h7l32")
+theme_override_font_sizes/normal_font_size = 17
+text = "score"
+
+[node name="value_score" type="RichTextLabel" parent="score_color"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 15.0
+offset_right = 100.0
+offset_bottom = 44.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_om06s")
+theme_override_font_sizes/normal_font_size = 27
+text = "000"
+
+[node name="Button_reset" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 39.0
+offset_right = 508.0
+offset_bottom = 97.0
+
+[node name="ColorRect" type="ColorRect" parent="Button_reset"]
+layout_mode = 0
+offset_right = 68.0
+offset_bottom = 58.0
+mouse_filter = 2
+color = Color(0.992157, 0.372549, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button_reset"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 19.0
+offset_right = 70.0
+offset_bottom = 39.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_8toha")
+theme_override_font_sizes/normal_font_size = 15
+text = "reset"
+
 [node name="Button_back" type="Button" parent="."]
 offset_left = 26.0
 offset_top = 39.0
 offset_right = 134.0
 offset_bottom = 97.0
+flat = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_back"]
 layout_mode = 0
@@ -26,149 +89,179 @@ theme_override_fonts/normal_font = ExtResource("4_om06s")
 theme_override_font_sizes/normal_font_size = 26
 text = "<- back"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 17.0
-offset_top = 803.0
-offset_right = 219.0
-offset_bottom = 829.0
-theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
-bbcode_enabled = true
-text = "Now: war_of_symbol"
-
-[node name="Button_num1" type="Button" parent="."]
-offset_left = 25.0
-offset_top = 204.0
-offset_right = 93.0
-offset_bottom = 272.0
-
-[node name="value_num1" type="RichTextLabel" parent="Button_num1"]
+[node name="ColorRect" type="ColorRect" parent="Button_back"]
+show_behind_parent = true
 layout_mode = 0
-offset_left = 12.0
+offset_right = 108.0
+offset_bottom = 57.0
+mouse_filter = 2
+color = Color(0.992157, 0.372549, 0, 1)
+
+[node name="box1" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 56.0
+offset_top = 192.0
+offset_right = 124.0
+offset_bottom = 260.0
+color = Color(0.372549, 0.815686, 0.407843, 1)
+
+[node name="value" type="RichTextLabel" parent="box1"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 23.0
+offset_right = 72.0
+offset_bottom = 68.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_om06s")
+theme_override_font_sizes/normal_font_size = 27
+text = "1233"
+
+[node name="box2" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 144.0
+offset_top = 192.0
+offset_right = 212.0
+offset_bottom = 260.0
+color = Color(0.0980392, 0.654902, 0.807843, 1)
+
+[node name="value" type="RichTextLabel" parent="box2"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 11.0
+offset_right = 68.0
+offset_bottom = 68.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "+"
+
+[node name="box3" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 240.0
+offset_top = 192.0
+offset_right = 308.0
+offset_bottom = 260.0
+color = Color(0.372549, 0.815686, 0.407843, 1)
+
+[node name="value" type="RichTextLabel" parent="box3"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 72.0
+offset_bottom = 60.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_om06s")
+theme_override_font_sizes/normal_font_size = 27
+text = "1233"
+
+[node name="box4" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 336.0
+offset_top = 192.0
+offset_right = 404.0
+offset_bottom = 260.0
+color = Color(0.0980392, 0.654902, 0.807843, 1)
+
+[node name="value" type="RichTextLabel" parent="box4"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 11.0
+offset_right = 56.0
+offset_bottom = 68.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "+"
+
+[node name="box5" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 422.0
+offset_top = 192.0
+offset_right = 490.0
+offset_bottom = 260.0
+color = Color(0.372549, 0.815686, 0.407843, 1)
+
+[node name="value" type="RichTextLabel" parent="box5"]
+layout_mode = 0
+offset_left = 10.0
 offset_top = 22.0
 offset_right = 68.0
-offset_bottom = 53.0
+offset_bottom = 68.0
 mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("4_om06s")
-theme_override_font_sizes/normal_font_size = 27
-text = "1233"
-
-[node name="Button_score" type="Button" parent="."]
-offset_left = 366.0
-offset_top = 40.0
-offset_right = 474.0
-offset_bottom = 98.0
-
-[node name="value_score" type="RichTextLabel" parent="Button_score"]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 15.0
-offset_right = 106.0
-offset_bottom = 52.0
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("4_om06s")
-theme_override_font_sizes/normal_font_size = 27
-text = "000"
-
-[node name="score_text" type="RichTextLabel" parent="Button_score"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 61.0
-offset_right = 94.0
-offset_bottom = 82.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_h7l32")
-theme_override_font_sizes/normal_font_size = 17
-text = "score"
-
-[node name="Button_num2" type="Button" parent="."]
-offset_left = 102.0
-offset_top = 213.0
-offset_right = 170.0
-offset_bottom = 281.0
-scale = Vector2(0.8, 0.8)
-
-[node name="value_sym" type="RichTextLabel" parent="Button_num2"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 22.0
-offset_right = 50.0
-offset_bottom = 51.0
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("4_om06s")
-theme_override_font_sizes/normal_font_size = 27
-text = "12"
-
-[node name="Button_num3" type="Button" parent="."]
-offset_left = 163.0
-offset_top = 205.0
-offset_right = 231.0
-offset_bottom = 273.0
-
-[node name="value_num2" type="RichTextLabel" parent="Button_num3"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 22.0
-offset_right = 61.0
-offset_bottom = 53.0
-mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("4_om06s")
 theme_override_font_sizes/normal_font_size = 27
 text = "1233"
 
-[node name="Button_num4" type="Button" parent="."]
-offset_left = 242.0
-offset_top = 212.0
-offset_right = 310.0
-offset_bottom = 280.0
-scale = Vector2(0.8, 0.8)
+[node name="box6" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = 576.0
+offset_top = 192.0
+offset_right = 644.0
+offset_bottom = 260.0
+color = Color(0.372549, 0.815686, 0.407843, 1)
 
-[node name="value_sym2" type="RichTextLabel" parent="Button_num4"]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 23.0
-offset_right = 51.0
-offset_bottom = 54.0
-mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("4_om06s")
-theme_override_font_sizes/normal_font_size = 27
-text = "12"
-
-[node name="Button_num5" type="Button" parent="."]
-offset_left = 305.0
-offset_top = 206.0
-offset_right = 373.0
-offset_bottom = 274.0
-
-[node name="value_num3" type="RichTextLabel" parent="Button_num5"]
+[node name="value" type="RichTextLabel" parent="box6"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 22.0
-offset_right = 61.0
-offset_bottom = 53.0
+offset_right = 68.0
+offset_bottom = 68.0
 mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_om06s")
 theme_override_font_sizes/normal_font_size = 27
 text = "1233"
 
-[node name="Button_num6" type="Button" parent="."]
-offset_left = 444.0
-offset_top = 207.0
-offset_right = 512.0
-offset_bottom = 275.0
+[node name="Timer" type="Timer" parent="."]
 
-[node name="value_num4" type="RichTextLabel" parent="Button_num6"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 22.0
-offset_right = 61.0
-offset_bottom = 53.0
-mouse_filter = 2
+[node name="Stopwatch" type="Sprite2D" parent="Timer"]
+position = Vector2(616, 336)
+scale = Vector2(0.167969, 0.167969)
+texture = ExtResource("6_1rwhw")
+
+[node name="min" type="RichTextLabel" parent="Timer"]
+offset_left = 568.0
+offset_top = 385.0
+offset_right = 619.0
+offset_bottom = 433.0
 theme_override_fonts/normal_font = ExtResource("4_om06s")
-theme_override_font_sizes/normal_font_size = 27
-text = "1233"
+theme_override_font_sizes/normal_font_size = 45
+text = "00"
+
+[node name="sec" type="RichTextLabel" parent="Timer"]
+offset_left = 633.0
+offset_top = 385.0
+offset_right = 684.0
+offset_bottom = 433.0
+theme_override_fonts/normal_font = ExtResource("4_om06s")
+theme_override_font_sizes/normal_font_size = 45
+text = "00"
+
+[node name="colon" type="RichTextLabel" parent="Timer"]
+offset_left = 616.0
+offset_top = 384.0
+offset_right = 629.0
+offset_bottom = 432.0
+theme_override_fonts/normal_font = ExtResource("4_om06s")
+theme_override_font_sizes/normal_font_size = 45
+text = ":"
+
+[node name="equal_sym" type="RichTextLabel" parent="."]
+offset_left = 515.0
+offset_top = 200.0
+offset_right = 539.0
+offset_bottom = 252.0
+theme_override_colors/default_color = Color(0.992157, 0.992157, 0.992157, 1)
+theme_override_font_sizes/normal_font_size = 37
+text = "="
 
 [node name="keyboard" type="Node2D" parent="."]
 script = ExtResource("8_gubft")
+
+[node name="Timer" type="Timer" parent="keyboard"]
 
 [node name="Button_a" type="Button" parent="keyboard"]
 offset_left = 126.0
@@ -187,6 +280,12 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "+"
 
+[node name="ColorRect" type="ColorRect" parent="keyboard/Button_a"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 68.0
+offset_bottom = 68.0
+
 [node name="Button_s" type="Button" parent="keyboard"]
 offset_left = 233.0
 offset_top = 413.0
@@ -203,6 +302,11 @@ mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 34
 text = "-"
+
+[node name="ColorRect" type="ColorRect" parent="keyboard/Button_s"]
+show_behind_parent = true
+offset_right = 68.0
+offset_bottom = 67.0
 
 [node name="Button_m" type="Button" parent="keyboard"]
 offset_left = 128.0
@@ -221,6 +325,11 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 27
 text = "x"
 
+[node name="ColorRect" type="ColorRect" parent="keyboard/Button_m"]
+show_behind_parent = true
+offset_right = 68.0
+offset_bottom = 68.0
+
 [node name="Button__d" type="Button" parent="keyboard"]
 offset_left = 234.0
 offset_top = 505.0
@@ -237,6 +346,11 @@ mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 27
 text = "%"
+
+[node name="ColorRect" type="ColorRect" parent="keyboard/Button__d"]
+show_behind_parent = true
+offset_right = 68.0
+offset_bottom = 67.0
 
 [node name="Button_backSpace" type="Button" parent="keyboard"]
 offset_left = 333.0
@@ -255,6 +369,11 @@ theme_override_fonts/normal_font = ExtResource("4_om06s")
 theme_override_font_sizes/normal_font_size = 27
 text = "<--"
 
+[node name="ColorRect" type="ColorRect" parent="keyboard/Button_backSpace"]
+show_behind_parent = true
+offset_right = 107.0
+offset_bottom = 58.0
+
 [node name="Button_enter" type="Button" parent="keyboard"]
 offset_left = 334.0
 offset_top = 514.0
@@ -272,13 +391,14 @@ theme_override_fonts/normal_font = ExtResource("4_om06s")
 theme_override_font_sizes/normal_font_size = 27
 text = "Enter"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 397.0
-offset_top = 220.0
-offset_right = 430.0
-offset_bottom = 266.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 26
-text = "="
+[node name="ColorRect" type="ColorRect" parent="keyboard/Button_enter"]
+show_behind_parent = true
+offset_right = 108.0
+offset_bottom = 58.0
 
-[connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
+[connection signal="pressed" from="keyboard/Button_a" to="keyboard" method="_on_button_a_pressed"]
+[connection signal="pressed" from="keyboard/Button_s" to="keyboard" method="_on_button_s_pressed"]
+[connection signal="pressed" from="keyboard/Button_m" to="keyboard" method="_on_button_m_pressed"]
+[connection signal="pressed" from="keyboard/Button__d" to="keyboard" method="_on_button__d_pressed"]
+[connection signal="pressed" from="keyboard/Button_backSpace" to="keyboard" method="_on_button_back_space_pressed"]
+[connection signal="pressed" from="keyboard/Button_enter" to="keyboard" method="_on_button_enter_pressed"]

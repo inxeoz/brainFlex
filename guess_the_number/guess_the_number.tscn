@@ -215,6 +215,49 @@ offset_bottom = 57.0
 mouse_filter = 2
 color = Color(0.992157, 0.372549, 0, 1)
 
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Stopwatch" type="Sprite2D" parent="Timer"]
+position = Vector2(616, 336)
+scale = Vector2(0.167969, 0.167969)
+texture = ExtResource("6_r6u3i")
+
+[node name="min" type="RichTextLabel" parent="Timer"]
+offset_left = 568.0
+offset_top = 385.0
+offset_right = 619.0
+offset_bottom = 433.0
+theme_override_fonts/normal_font = ExtResource("4_lxiho")
+theme_override_font_sizes/normal_font_size = 45
+text = "00"
+
+[node name="sec" type="RichTextLabel" parent="Timer"]
+offset_left = 633.0
+offset_top = 385.0
+offset_right = 684.0
+offset_bottom = 433.0
+theme_override_fonts/normal_font = ExtResource("4_lxiho")
+theme_override_font_sizes/normal_font_size = 45
+text = "00"
+
+[node name="colon" type="RichTextLabel" parent="Timer"]
+offset_left = 616.0
+offset_top = 384.0
+offset_right = 629.0
+offset_bottom = 432.0
+theme_override_fonts/normal_font = ExtResource("4_lxiho")
+theme_override_font_sizes/normal_font_size = 45
+text = ":"
+
+[node name="equal_sym" type="RichTextLabel" parent="."]
+offset_left = 515.0
+offset_top = 200.0
+offset_right = 539.0
+offset_bottom = 252.0
+theme_override_colors/default_color = Color(0.992157, 0.992157, 0.992157, 1)
+theme_override_font_sizes/normal_font_size = 37
+text = "="
+
 [node name="keyboard" type="Node2D" parent="."]
 script = ExtResource("8_x88lc")
 
@@ -567,51 +610,9 @@ offset_bottom = 57.0
 mouse_filter = 2
 color = Color(0.0980392, 0.654902, 0.807843, 1)
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 515.0
-offset_top = 200.0
-offset_right = 539.0
-offset_bottom = 252.0
-theme_override_colors/default_color = Color(0.992157, 0.992157, 0.992157, 1)
-theme_override_font_sizes/normal_font_size = 37
-text = "="
-
-[node name="Timer" type="Timer" parent="."]
-
-[node name="Stopwatch" type="Sprite2D" parent="Timer"]
-position = Vector2(616, 336)
-scale = Vector2(0.167969, 0.167969)
-texture = ExtResource("6_r6u3i")
-
-[node name="min" type="RichTextLabel" parent="Timer"]
-offset_left = 568.0
-offset_top = 385.0
-offset_right = 619.0
-offset_bottom = 433.0
-theme_override_fonts/normal_font = ExtResource("4_lxiho")
-theme_override_font_sizes/normal_font_size = 45
-text = "00"
-
-[node name="sec" type="RichTextLabel" parent="Timer"]
-offset_left = 633.0
-offset_top = 385.0
-offset_right = 684.0
-offset_bottom = 433.0
-theme_override_fonts/normal_font = ExtResource("4_lxiho")
-theme_override_font_sizes/normal_font_size = 45
-text = "00"
-
-[node name="colon" type="RichTextLabel" parent="Timer"]
-offset_left = 616.0
-offset_top = 384.0
-offset_right = 629.0
-offset_bottom = 432.0
-theme_override_fonts/normal_font = ExtResource("4_lxiho")
-theme_override_font_sizes/normal_font_size = 45
-text = ":"
-
 [connection signal="pressed" from="Button_reset" to="." method="_on_button_reset_pressed"]
 [connection signal="pressed" from="Button_back" to="." method="_on_button_back_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="value_entered" from="keyboard" to="." method="_on_keyboard_value_entered"]
 [connection signal="timeout" from="keyboard/Timer" to="keyboard" method="_on_timer_timeout"]
 [connection signal="pressed" from="keyboard/Button_0" to="keyboard" method="_on_button_0_pressed"]
@@ -626,4 +627,3 @@ text = ":"
 [connection signal="pressed" from="keyboard/Button_9" to="keyboard" method="_on_button_9_pressed"]
 [connection signal="pressed" from="keyboard/Button_backSpace" to="keyboard" method="_on_button_back_space_pressed"]
 [connection signal="pressed" from="keyboard/Button_enter" to="keyboard" method="_on_button_enter_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

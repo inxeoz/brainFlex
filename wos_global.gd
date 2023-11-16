@@ -1,5 +1,4 @@
-extends Node2D
-var select_mode = load("res://select_mode/select_mode.tscn")
+extends Node
 
 
 # Called when the node enters the scene tree for the first time.
