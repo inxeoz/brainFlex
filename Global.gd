@@ -8,4 +8,7 @@ var difficulty_lvl = 0
 var attempts = 0
 var min_range = 2
 var max_range = 100
+var timer_time = 20
+var success = 0
+var failure = 0
 

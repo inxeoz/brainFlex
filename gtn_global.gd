@@ -8,4 +8,6 @@ var color_nodes:Array
 var op_color:Array
 var op_sym:Array
 var gtn_attmpt:int = 0
+var hide_num = 0
+var possi: Array = [0, 2,4, 5]
 

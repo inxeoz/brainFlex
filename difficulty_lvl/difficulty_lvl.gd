@@ -20,8 +20,7 @@ func _on_button_back_pressed():
 	get_tree().change_scene_to_packed(settings);
 
 func _on_button_easy_pressed():
-	set_dif(DarkTheme.lvl1, DarkTheme.color5, DarkTheme.color5, 0, 2, 100)
-
+	set_dif(DarkTheme.lvl1, DarkTheme.color5, DarkTheme.color5, 0, 2, 200)
 func _on_button_medium_pressed():
 	set_dif(DarkTheme.color5, DarkTheme.lvl2, DarkTheme.color5, 1, 2, 400)
 
@@ -35,5 +34,6 @@ func set_dif(easy_color:Color, medium_color:Color, hard_color:Color, dif_lvl:int
 	Global.difficulty_lvl =dif_lvl
 	Global.min_range = min
 	Global.max_range = max
-	print("min ", min, " max ", max)
+	Global.timer_time = 5600/max
+	print("min ", min, " max ", max, " timer_time ", Global.timer_time)
 	
