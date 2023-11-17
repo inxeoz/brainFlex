@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+WosGlobal="*res://wos_global.gd"
 DarkTheme="*res://dark_theme.gd"
 LightTheme="*res://light_theme.gd"
 GtnGlobal="*res://gtn_global.gd"

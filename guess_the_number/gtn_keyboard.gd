@@ -69,20 +69,7 @@ func _on_button_back_space_pressed():
 	var length= str(GtnGlobal.value).length()
 	GtnGlobal.value = str(GtnGlobal.value).substr(0, length-1).to_int()
 	each_button_func($Button_backSpace/ColorRect)
-	
-
-func _on_button_display_pressed():
-	pass
 
 func _on_button_enter_pressed():
 	each_button_func($Button_enter/ColorRect)
 	value_entered.emit()
-
-
-	
-	
-
-
-	
-	
-
