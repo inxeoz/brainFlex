@@ -47,6 +47,40 @@ theme_override_fonts/normal_font = ExtResource("4_om06s")
 theme_override_font_sizes/normal_font_size = 27
 text = "000"
 
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Stopwatch" type="Sprite2D" parent="Timer"]
+position = Vector2(390, 87)
+scale = Vector2(0.124512, 0.124512)
+texture = ExtResource("6_1rwhw")
+
+[node name="min" type="RichTextLabel" parent="Timer"]
+offset_left = 424.0
+offset_top = 72.0
+offset_right = 475.0
+offset_bottom = 120.0
+theme_override_fonts/normal_font = ExtResource("4_om06s")
+theme_override_font_sizes/normal_font_size = 45
+text = "00"
+
+[node name="sec" type="RichTextLabel" parent="Timer"]
+offset_left = 488.0
+offset_top = 72.0
+offset_right = 539.0
+offset_bottom = 120.0
+theme_override_fonts/normal_font = ExtResource("4_om06s")
+theme_override_font_sizes/normal_font_size = 45
+text = "00"
+
+[node name="colon" type="RichTextLabel" parent="Timer"]
+offset_left = 472.0
+offset_top = 72.0
+offset_right = 488.0
+offset_bottom = 120.0
+theme_override_fonts/normal_font = ExtResource("4_om06s")
+theme_override_font_sizes/normal_font_size = 45
+text = ":"
+
 [node name="Button_reset" type="Button" parent="."]
 offset_left = 570.0
 offset_top = 168.0
@@ -90,40 +124,6 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("5_46irp")
 theme_override_font_sizes/normal_font_size = 45
 text = "("
-
-[node name="Timer" type="Timer" parent="."]
-
-[node name="Stopwatch" type="Sprite2D" parent="Timer"]
-position = Vector2(390, 87)
-scale = Vector2(0.124512, 0.124512)
-texture = ExtResource("6_1rwhw")
-
-[node name="min" type="RichTextLabel" parent="Timer"]
-offset_left = 424.0
-offset_top = 72.0
-offset_right = 475.0
-offset_bottom = 120.0
-theme_override_fonts/normal_font = ExtResource("4_om06s")
-theme_override_font_sizes/normal_font_size = 45
-text = "00"
-
-[node name="sec" type="RichTextLabel" parent="Timer"]
-offset_left = 488.0
-offset_top = 72.0
-offset_right = 539.0
-offset_bottom = 120.0
-theme_override_fonts/normal_font = ExtResource("4_om06s")
-theme_override_font_sizes/normal_font_size = 45
-text = "00"
-
-[node name="colon" type="RichTextLabel" parent="Timer"]
-offset_left = 472.0
-offset_top = 72.0
-offset_right = 488.0
-offset_bottom = 120.0
-theme_override_fonts/normal_font = ExtResource("4_om06s")
-theme_override_font_sizes/normal_font_size = 45
-text = ":"
 
 [node name="box2" type="ColorRect" parent="."]
 show_behind_parent = true

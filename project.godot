@@ -22,6 +22,7 @@ DarkTheme="*res://dark_theme.gd"
 LightTheme="*res://light_theme.gd"
 GtnGlobal="*res://gtn_global.gd"
 Global="*res://Global.gd"
+GlobalTheme="*res://theme.gd"
 
 [display]
 

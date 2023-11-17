@@ -4,12 +4,12 @@ var time:int
 var leng =0
 var lib:Array
 var res:int
-# Called when the node enters the scene tree for the first time.
+var hidden_in:int# Called when the node enters the scene tree for the first time.
 func _ready():
-	reset()
+	_on_button_reset_pressed()
 	pass
 
-func reset():
+func reset(hide_in=-1):
 	lib = gen()
 	res= cal_res(lib)
 	leng = str(res).length()
@@ -32,11 +32,15 @@ func reset():
 		$box2/value.text = str(lib[0])
 		$box5/value.text = str(lib[1])
 		$box8/value.text = str(lib[2])
-		$box3/value.text = str(lib[3])
-		$box7/value.text = lib[4]
+		if hide_in == 0:
+			WosGlobal.hidden_sym = lib[3]
+			$box3/value.text = ""
+		else:
+			WosGlobal.hidden_sym = lib[4]
+			$box7/value.text = ""
 		$box11/value.text = str(res)
 	else:
-		reset()
+		_on_button_reset_pressed()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -54,8 +58,11 @@ func _on_timer_timeout():
 	else:
 		$Timer.stop()
 	
-func _on_keyboard_sym_entered():
-	pass
+func _on_keyboard_sym_entered(sym:String):
+	if sym == WosGlobal.hidden_sym:
+		print(" you've got right ", sym)
+	else:
+		print(" you've got wrong ")
 func randm():
 	return randi_range(Global.min_range, Global.max_range)
 	
@@ -91,7 +98,6 @@ func cal_res(ele:Array):
 		return operation(operation(ele[0], ele[1], ele[3]), ele[2], ele[4])
 	else:
 		return operation(ele[0], operation(ele[1], ele[2], ele[4]), ele[3])
-	pass
 func operation(num1:int, num2:int, sym:String):
 	match sym:
 		"+":
@@ -102,4 +108,6 @@ func operation(num1:int, num2:int, sym:String):
 			return num1*num2
 		"/":
 			return num1/num2
-
+func _on_button_reset_pressed():
+	WosGlobal.sym_hidden_in = randi_range(0, 1)
+	reset(hidden_in)

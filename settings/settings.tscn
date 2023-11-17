@@ -92,14 +92,6 @@ offset_bottom = 61.0
 mouse_filter = 2
 color = Color(0.992157, 0.372549, 0, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 17.0
-offset_top = 803.0
-offset_right = 139.0
-offset_bottom = 829.0
-theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
-text = "Now: settings"
-
 [connection signal="button_down" from="Button_difficulty_lvl" to="." method="_on_button_difficulty_lvl_button_down"]
 [connection signal="button_up" from="Button_difficulty_lvl" to="." method="_on_button_difficulty_lvl_button_up"]
 [connection signal="button_down" from="Button_Hints" to="." method="_on_button_hints_button_down"]

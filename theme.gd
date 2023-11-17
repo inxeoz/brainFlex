@@ -1,0 +1,11 @@
+extends Node
+var color_bg:Color = "13334c"
+var color_bg_sec:Color = "005792"
+var color_on_click:Color = "fd5f00"
+var color_on_inactive:Color = "757575"
+var highlight_easy_lvl1:Color = "4ba54d"
+var highlight_easy_lvl2:Color = "19a7ce"
+var highlight_dim_lvl1:Color = "f2ee81"
+var highlight_dim_lvl2:Color = "f0c15a"
+var white:Color = "ffffff"
+var black:Color = "000000"
