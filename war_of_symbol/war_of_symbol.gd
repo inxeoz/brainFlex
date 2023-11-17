@@ -1,34 +1,42 @@
 extends Node2D
 var select_mode = load("res://select_mode/select_mode.tscn")
 var time:int
+var leng =0
+var lib:Array
+var res:int
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#start_timer(5)
-	var lib = gen()
+	reset()
+	pass
+
+func reset():
+	lib = gen()
+	res= cal_res(lib)
+	leng = str(res).length()
 	for val in lib:
-		if str(val).length() > 5:
-			_ready()
-	var res= cal_res(lib)
-	if lib[5] == 0:
-		$box1/value.text = "("
-		$box6/value.text = ")"
-		$box4/value.text = ""
-		$box9/value.text = ""
+		leng = max(leng, str(val).length())
+		print("leng ", leng)
+	if leng< Global.leng_ele:
+		print("--->", lib)
+		print(res)
+		if lib[5] == 0:
+			$box1/value.text = "("
+			$box6/value.text = ")"
+			$box4/value.text = ""
+			$box9/value.text = ""
+		else:
+			$box1/value.text = ""
+			$box6/value.text = ""
+			$box4/value.text ="("
+			$box9/value.text = ")"
+		$box2/value.text = str(lib[0])
+		$box5/value.text = str(lib[1])
+		$box8/value.text = str(lib[2])
+		$box3/value.text = str(lib[3])
+		$box7/value.text = lib[4]
+		$box11/value.text = str(res)
 	else:
-		$box1/value.text = ""
-		$box6/value.text = ""
-		$box4/value.text ="("
-		$box9/value.text = ")"
-	$box2/value.text = str(lib[0])
-	$box5/value.text = str(lib[1])
-	$box8/value.text = str(lib[2])
-	$box3/value.text = str(lib[3])
-	$box7/value.text = lib[4]
-	$box11/value.text = str(res)
-	print("--->", lib)
-	print(res)
-
-
+		reset()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

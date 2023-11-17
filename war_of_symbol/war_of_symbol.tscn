@@ -13,10 +13,8 @@ script = ExtResource("1_346ir")
 
 [node name="Color_bg" type="ColorRect" parent="."]
 show_behind_parent = true
-offset_left = 4.0
-offset_top = -29.0
-offset_right = 724.0
-offset_bottom = 1251.0
+offset_right = 720.0
+offset_bottom = 1280.0
 color = Color(0.0470588, 0.207843, 0.415686, 1)
 
 [node name="score_color" type="ColorRect" parent="."]
@@ -137,7 +135,6 @@ color = Color(0.372549, 0.815686, 0.407843, 1)
 
 [node name="value" type="RichTextLabel" parent="box2"]
 layout_mode = 0
-offset_left = 12.0
 offset_top = 40.0
 offset_right = 84.0
 offset_bottom = 80.0
