@@ -7,10 +7,10 @@
 [node name="select_mode" type="Node2D"]
 script = ExtResource("1_ctroj")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Color_bg" type="ColorRect" parent="."]
 show_behind_parent = true
 offset_right = 720.0
-offset_bottom = 1281.0
+offset_bottom = 1280.0
 color = Color(0.0745098, 0.2, 0.298039, 1)
 
 [node name="Button_guess_the_number" type="Button" parent="."]

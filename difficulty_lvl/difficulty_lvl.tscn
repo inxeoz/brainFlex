@@ -42,14 +42,6 @@ offset_bottom = 58.0
 mouse_filter = 2
 color = Color(0.992157, 0.372549, 0, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 17.0
-offset_top = 803.0
-offset_right = 161.0
-offset_bottom = 829.0
-theme_override_colors/default_color = Color(0.141176, 0.215686, 0.388235, 1)
-text = "Now: difficulty_lvl"
-
 [node name="Button_easy" type="Button" parent="."]
 offset_left = 152.0
 offset_top = 312.0
@@ -89,13 +81,6 @@ offset_right = 568.0
 offset_bottom = 512.0
 flat = true
 
-[node name="ColorRect" type="ColorRect" parent="Button_medium"]
-layout_mode = 0
-offset_right = 416.0
-offset_bottom = 72.0
-mouse_filter = 2
-color = Color(0.952941, 0.937255, 0.509804, 1)
-
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_medium"]
 layout_mode = 0
 offset_left = 14.0
@@ -109,6 +94,13 @@ theme_override_fonts/normal_font = ExtResource("3_tgoiw")
 theme_override_font_sizes/normal_font_size = 40
 text = "medium"
 
+[node name="ColorRect" type="ColorRect" parent="Button_medium"]
+layout_mode = 0
+offset_right = 416.0
+offset_bottom = 72.0
+mouse_filter = 2
+color = Color(0.952941, 0.937255, 0.509804, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="Button_medium"]
 position = Vector2(386, 36)
 scale = Vector2(0.110481, 0.119008)
@@ -120,13 +112,6 @@ offset_top = 568.0
 offset_right = 568.0
 offset_bottom = 640.0
 flat = true
-
-[node name="ColorRect" type="ColorRect" parent="Button_hard"]
-layout_mode = 0
-offset_right = 416.0
-offset_bottom = 72.0
-mouse_filter = 2
-color = Color(0.941176, 0.756863, 0.352941, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Button_hard"]
 layout_mode = 0
@@ -140,6 +125,13 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_tgoiw")
 theme_override_font_sizes/normal_font_size = 40
 text = "hard"
+
+[node name="ColorRect" type="ColorRect" parent="Button_hard"]
+layout_mode = 0
+offset_right = 416.0
+offset_bottom = 72.0
+mouse_filter = 2
+color = Color(0.941176, 0.756863, 0.352941, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Button_hard"]
 position = Vector2(373, 36)

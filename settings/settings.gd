@@ -6,8 +6,7 @@ var profile = load("res://profile/profile.tscn");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Button_difficulty_lvl/ColorRect.color = DarkTheme.color2
-	$Button_Hints/ColorRect.color = DarkTheme.color2
+	make_it_ready()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -57,7 +56,7 @@ func make_it_ready():
 	$Button_back.flat = true
 	$Button_back/RichTextLabel.mouse_filter = 2
 	$Button_back/RichTextLabel.add_theme_font_override("normal_font",load("res://res/font/EvilEmpire-4BBVK.ttf") )
-	$Button_back/RichTextLabel.add_theme_font_size_override("normal_font_size", 41)
+	$Button_back/RichTextLabel.add_theme_font_size_override("normal_font_size", 26)
 	$Button_back/ColorRect.color = GlobalTheme.color_on_click
 	$Button_back/ColorRect.mouse_filter = 2
 	$Button_back/ColorRect.show_behind_parent = true

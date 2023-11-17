@@ -12,4 +12,5 @@ var timer_time = 20
 var success = 0
 var failure = 0
 var leng_ele = 5
+### startmenu, settings, difi_lvl, hint_st, select_mode*working
 
