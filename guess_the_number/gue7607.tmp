@@ -615,9 +615,9 @@ color = Color(0.0980392, 0.654902, 0.807843, 1)
 
 [node name="Button_backSpace" type="Button" parent="keyboard"]
 offset_left = 480.0
-offset_top = 736.0
+offset_top = 704.0
 offset_right = 588.0
-offset_bottom = 794.0
+offset_bottom = 762.0
 flat = true
 
 [node name="value_num1" type="RichTextLabel" parent="keyboard/Button_backSpace"]
@@ -688,33 +688,6 @@ offset_bottom = 57.0
 mouse_filter = 2
 color = Color(0.0980392, 0.654902, 0.807843, 1)
 
-[node name="Button_neg" type="Button" parent="keyboard"]
-offset_left = 480.0
-offset_top = 634.0
-offset_right = 588.0
-offset_bottom = 692.0
-flat = true
-
-[node name="value_num1" type="RichTextLabel" parent="keyboard/Button_neg"]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 6.0
-offset_right = 64.0
-offset_bottom = 54.0
-mouse_filter = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_lxiho")
-theme_override_font_sizes/normal_font_size = 45
-text = "-"
-
-[node name="ColorRect" type="ColorRect" parent="keyboard/Button_neg"]
-show_behind_parent = true
-layout_mode = 0
-offset_right = 108.0
-offset_bottom = 57.0
-mouse_filter = 2
-color = Color(0.0980392, 0.654902, 0.807843, 1)
-
 [node name="chat_box" type="RichTextLabel" parent="."]
 offset_left = 40.0
 offset_top = 232.0
@@ -741,4 +714,3 @@ text = "enter desired symbol"
 [connection signal="pressed" from="keyboard/Button_9" to="keyboard" method="_on_button_9_pressed"]
 [connection signal="pressed" from="keyboard/Button_backSpace" to="keyboard" method="_on_button_back_space_pressed"]
 [connection signal="pressed" from="keyboard/Button_enter" to="keyboard" method="_on_button_enter_pressed"]
-[connection signal="pressed" from="keyboard/Button_neg" to="keyboard" method="_on_button_neg_pressed"]

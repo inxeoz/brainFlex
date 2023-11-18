@@ -21,7 +21,7 @@ func reset():
 		leng = max(leng, str(val).length())
 		print("leng ", leng)
 	if leng< Global.leng_ele:
-		WosGlobal.sym_hidden_in = randi_range(0, 1)
+		
 		print("--->", lib)
 		print(res)
 		if lib[5] == 0:
@@ -29,7 +29,7 @@ func reset():
 			$box6/value.text = ")"
 			$box4/value.text = ""
 			$box9/value.text = ""
-		else:
+		elif lib[5] == 1:
 			$box1/value.text = ""
 			$box6/value.text = ""
 			$box4/value.text ="("
@@ -37,6 +37,7 @@ func reset():
 		$box2/value.text = str(lib[0])
 		$box5/value.text = str(lib[1])
 		$box8/value.text = str(lib[2])
+		WosGlobal.sym_hidden_in = randi_range(0, 1)
 		if WosGlobal.sym_hidden_in== 0:
 			WosGlobal.hidden_sym = lib[3]
 			$box3/value.text = ""

@@ -2,7 +2,7 @@ extends Node2D
 var button_color_node:ColorRect
 var color_normal:Color
 @onready var display_value = $color_display/value_display_value
-
+var input = ""
 signal value_entered
 
 # Called when the node enters the scene tree for the first time.
@@ -62,14 +62,19 @@ func each_button_func(color_rect:ColorRect, str_value= "-1"):
 	color_normal = button_color_node.color
 	button_color_node.color = DarkTheme.color_on_click
 	if(str_value != "-1"):
-		GtnGlobal.value = (str(GtnGlobal.value)+str_value).to_int()
-	display_value.text = str(GtnGlobal.value)
+		input  += str_value
+	display_value.text = input
 	
 func _on_button_back_space_pressed():
-	var length= str(GtnGlobal.value).length()
-	GtnGlobal.value = str(GtnGlobal.value).substr(0, length-1).to_int()
+	var length= input.length()
+	input = input.substr(0, length-1)
 	each_button_func($Button_backSpace/ColorRect)
 
 func _on_button_enter_pressed():
 	each_button_func($Button_enter/ColorRect)
-	value_entered.emit()
+	value_entered.emit(input)
+
+
+func _on_button_neg_pressed():
+	input = str(-1 * input.to_int())
+	each_button_func($Button_neg/ColorRect)
