@@ -4,12 +4,16 @@ var time:int
 var leng =0
 var lib:Array
 var res:int
-var hidden_in:int# Called when the node enters the scene tree for the first time.
+var hidden_in:int
+var sym_ent_correctly_indexed = false
 func _ready():
-	_on_button_reset_pressed()
+	make_it_ready()
+	reset()
 	pass
 
-func reset(hide_in=-1):
+func reset():
+	make_it_ready()
+	sym_ent_correctly_indexed = false
 	lib = gen()
 	res= cal_res(lib)
 	leng = str(res).length()
@@ -17,6 +21,7 @@ func reset(hide_in=-1):
 		leng = max(leng, str(val).length())
 		print("leng ", leng)
 	if leng< Global.leng_ele:
+		WosGlobal.sym_hidden_in = randi_range(0, 1)
 		print("--->", lib)
 		print(res)
 		if lib[5] == 0:
@@ -32,15 +37,20 @@ func reset(hide_in=-1):
 		$box2/value.text = str(lib[0])
 		$box5/value.text = str(lib[1])
 		$box8/value.text = str(lib[2])
-		if hide_in == 0:
+		if WosGlobal.sym_hidden_in== 0:
 			WosGlobal.hidden_sym = lib[3]
 			$box3/value.text = ""
+			$box7/value.text = lib[4]
+			$box3.color = GlobalTheme.highlight_easy_lvl3
 		else:
 			WosGlobal.hidden_sym = lib[4]
+			$box3/value.text = lib[3]
 			$box7/value.text = ""
+			$box7.color = GlobalTheme.highlight_easy_lvl3
 		$box11/value.text = str(res)
+		start_timer(10)
 	else:
-		_on_button_reset_pressed()
+		reset()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -53,16 +63,39 @@ func start_timer(time_limit:int):
 func _on_timer_timeout():
 	if time > 0:
 		time -=1
-		print("time ", time)
+		print("time ----->", time)
+		$Timer/sec.text = str(time).pad_zeros(2)
 		$Timer.start()
 	else:
+		chat_box("time's up!, you'll get +1 score for choosing correcct symbol")
 		$Timer.stop()
 	
 func _on_keyboard_sym_entered(sym:String):
 	if sym == WosGlobal.hidden_sym:
-		print(" you've got right ", sym)
+		correct_sym_ent(sym)
 	else:
-		print(" you've got wrong ")
+		incorrect_sym_ent()
+		
+func correct_sym_ent(sym:String):
+	if not sym_ent_correctly_indexed:
+			$Timer.stop()
+			sym_ent_correctly_indexed = true
+			WosGlobal.score += time * 2 + 1
+			$score_color/value_score.text = str(WosGlobal.score)
+			if WosGlobal.sym_hidden_in== 0:
+				$box3/value.text = sym
+				$box3.color = GlobalTheme.highlight_easy_lvl1
+			else:
+				$box7/value.text = sym
+				$box7.color = GlobalTheme.highlight_easy_lvl1
+			chat_box("you've got right, your score is : " +str( WosGlobal.score) +"\n"+ "press reset for next round")
+	else:
+		chat_box("press reset for next round ")
+func incorrect_sym_ent():
+	if not sym_ent_correctly_indexed:
+		chat_box("you've got wrong ")
+	else:
+		chat_box("press reset for next round ")
 func randm():
 	return randi_range(Global.min_range, Global.max_range)
 	
@@ -109,5 +142,73 @@ func operation(num1:int, num2:int, sym:String):
 		"/":
 			return num1/num2
 func _on_button_reset_pressed():
-	WosGlobal.sym_hidden_in = randi_range(0, 1)
-	reset(hidden_in)
+	reset()
+
+func _on_button_back_pressed():
+	get_tree().change_scene_to_packed(select_mode)
+	
+func chat_box(msg:String):
+	$chat_box.text = msg
+func make_it_ready():
+	$Color_bg.color= GlobalTheme.color_bg
+	
+	$Button_back/RichTextLabel.add_theme_color_override("default_color", GlobalTheme.white)
+	$Button_back/ColorRect.color = GlobalTheme.color_on_click
+	
+	$Button_reset/ColorRect.color = GlobalTheme.color_on_click
+	$Button_reset/RichTextLabel.add_theme_color_override("default_color", GlobalTheme.white)
+	
+	$score_color.color = GlobalTheme.highlight_dim_lvl2
+	$score_color/score_text.add_theme_color_override("default_color", GlobalTheme.white)
+	$score_color/value_score.add_theme_color_override("default_color", GlobalTheme.white)
+	
+	$Timer/sec.add_theme_color_override("default_color", GlobalTheme.white)
+	
+	$box1.color = GlobalTheme.highlight_easy_lvl1
+	$box1/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box2.color = GlobalTheme.highlight_easy_lvl1
+	$box2/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box3.color = GlobalTheme.highlight_easy_lvl1
+	$box3/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box4.color = GlobalTheme.highlight_easy_lvl1
+	$box4/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box5.color = GlobalTheme.highlight_easy_lvl1
+	$box5/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box6.color = GlobalTheme.highlight_easy_lvl1
+	$box6/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box7.color = GlobalTheme.highlight_easy_lvl1
+	$box7/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box8.color = GlobalTheme.highlight_easy_lvl1
+	$box8/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box9.color = GlobalTheme.highlight_easy_lvl1
+	$box9/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box10.color = GlobalTheme.highlight_easy_lvl1
+	$box10/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	$box11.color = GlobalTheme.highlight_easy_lvl1
+	$box11/value.add_theme_color_override("default_color", GlobalTheme.black)
+	
+	#keyboards keys
+	$keyboard/Button_a/value.add_theme_color_override("default_color", GlobalTheme.black)
+	$keyboard/Button_a/ColorRect.color = GlobalTheme.highlight_easy_lvl2
+	
+	$keyboard/Button_s/value.add_theme_color_override("default_color", GlobalTheme.black)
+	$keyboard/Button_s/ColorRect.color = GlobalTheme.highlight_easy_lvl2
+	
+	$keyboard/Button_m/value.add_theme_color_override("default_color", GlobalTheme.black)
+	$keyboard/Button_m/ColorRect.color = GlobalTheme.highlight_easy_lvl2
+	
+	$keyboard/Button_d/value.add_theme_color_override("default_color", GlobalTheme.black)
+	$keyboard/Button_d/ColorRect.color = GlobalTheme.highlight_easy_lvl2
+	
+	$chat_box.add_theme_color_override("default_color", GlobalTheme.white)
+	

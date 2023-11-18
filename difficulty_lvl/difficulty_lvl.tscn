@@ -13,7 +13,7 @@ script = ExtResource("1_hw7ea")
 show_behind_parent = true
 offset_right = 720.0
 offset_bottom = 1280.0
-color = Color(0.0745098, 0.2, 0.298039, 1)
+color = Color(0.0470588, 0.207843, 0.415686, 1)
 
 [node name="Button_back" type="Button" parent="."]
 offset_left = 59.0
@@ -50,6 +50,7 @@ offset_bottom = 384.0
 flat = true
 
 [node name="ColorRect" type="ColorRect" parent="Button_easy"]
+show_behind_parent = true
 layout_mode = 0
 offset_right = 416.0
 offset_bottom = 72.0
@@ -95,6 +96,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "medium"
 
 [node name="ColorRect" type="ColorRect" parent="Button_medium"]
+show_behind_parent = true
 layout_mode = 0
 offset_right = 416.0
 offset_bottom = 72.0
@@ -127,6 +129,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "hard"
 
 [node name="ColorRect" type="ColorRect" parent="Button_hard"]
+show_behind_parent = true
 layout_mode = 0
 offset_right = 416.0
 offset_bottom = 72.0

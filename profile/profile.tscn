@@ -9,11 +9,9 @@ script = ExtResource("1_yq4dt")
 
 [node name="color_bg" type="ColorRect" parent="."]
 show_behind_parent = true
-offset_left = -19.0
-offset_top = -17.0
-offset_right = 745.0
-offset_bottom = 1319.0
-color = Color(0.0745098, 0.2, 0.298039, 1)
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.0470588, 0.207843, 0.415686, 1)
 
 [node name="Button_back" type="Button" parent="."]
 offset_left = 59.0

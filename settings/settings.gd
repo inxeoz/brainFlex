@@ -35,29 +35,10 @@ func _on_button_hints_button_up():
 	
 func make_it_ready():
 	$ColorRect.color = GlobalTheme.color_bg
-	$ColorRect.show_behind_parent = true
 	
-	$Button_difficulty_lvl.flat = true
-	$Button_difficulty_lvl/RichTextLabel.mouse_filter = 2
-	$Button_difficulty_lvl/RichTextLabel.add_theme_font_override("normal_font",load("res://res/font/EvilEmpire-4BBVK.ttf") )
-	$Button_difficulty_lvl/RichTextLabel.add_theme_font_size_override("normal_font_size", 41)
 	$Button_difficulty_lvl/ColorRect.color = GlobalTheme.color_bg_sec
-	$Button_difficulty_lvl/ColorRect.mouse_filter = 2
-	$Button_difficulty_lvl/ColorRect.show_behind_parent = true
-	
-	$Button_Hints.flat = true
-	$Button_Hints/RichTextLabel.mouse_filter = 2
-	$Button_Hints/RichTextLabel.add_theme_font_override("normal_font",load("res://res/font/EvilEmpire-4BBVK.ttf") )
-	$Button_Hints/RichTextLabel.add_theme_font_size_override("normal_font_size", 41)
+
 	$Button_Hints/ColorRect.color = GlobalTheme.color_bg_sec
-	$Button_Hints/ColorRect.mouse_filter = 2
-	$Button_Hints/ColorRect.show_behind_parent = true
-	
-	$Button_back.flat = true
-	$Button_back/RichTextLabel.mouse_filter = 2
-	$Button_back/RichTextLabel.add_theme_font_override("normal_font",load("res://res/font/EvilEmpire-4BBVK.ttf") )
-	$Button_back/RichTextLabel.add_theme_font_size_override("normal_font_size", 26)
+
 	$Button_back/ColorRect.color = GlobalTheme.color_on_click
-	$Button_back/ColorRect.mouse_filter = 2
-	$Button_back/ColorRect.show_behind_parent = true
 	
