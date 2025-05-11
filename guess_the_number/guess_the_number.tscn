@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://bt5xq8ojsgw8"]
 
-[ext_resource type="Script" path="res://guess_the_number/guess_the_number.gd" id="1_8u2vg"]
+[ext_resource type="Script" uid="uid://be0bgxim88878" path="res://guess_the_number/guess_the_number.gd" id="1_8u2vg"]
 [ext_resource type="FontFile" uid="uid://bs07gh5npwlpu" path="res://res/font/NoizeSportFreeVertionRegular-MVwye.ttf" id="2_tin5u"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_lxiho"]
 [ext_resource type="Texture2D" uid="uid://htnetdhbp2y7" path="res://res/timer.png" id="6_r6u3i"]
 [ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="6_yq4ic"]
 [ext_resource type="FontFile" uid="uid://b173hv8inhbpa" path="res://res/font/AmericanCaptain-MdEY.otf" id="7_8k0pj"]
-[ext_resource type="Script" path="res://guess_the_number/gtn_keyboard.gd" id="8_x88lc"]
+[ext_resource type="Script" uid="uid://dsi4v716mpjpc" path="res://guess_the_number/gtn_keyboard.gd" id="8_x88lc"]
 [ext_resource type="FontFile" uid="uid://bl0rgt2mgncru" path="res://res/font/good times rg.otf" id="8_xdqpu"]
 
 [node name="guess_the_number" type="Node2D"]

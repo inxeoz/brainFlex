@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d1rg24nab81hh"]
 
-[ext_resource type="Script" path="res://difficulty_lvl/difficulty_lvl.gd" id="1_hw7ea"]
+[ext_resource type="Script" uid="uid://cppax53dqxi6e" path="res://difficulty_lvl/difficulty_lvl.gd" id="1_hw7ea"]
 [ext_resource type="Texture2D" uid="uid://by722qcnn3u00" path="res://res/rat.png" id="3_nq71l"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="3_tgoiw"]
 [ext_resource type="Texture2D" uid="uid://d00btd2hgahy1" path="res://res/cat.png" id="4_mpfig"]

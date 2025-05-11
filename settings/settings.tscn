@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpcysyv0jipam"]
 
-[ext_resource type="Script" path="res://settings/settings.gd" id="1_nkf5g"]
+[ext_resource type="Script" uid="uid://hvngdfdesmjl" path="res://settings/settings.gd" id="1_nkf5g"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_qbdxv"]
 
 [node name="settings" type="Node2D"]

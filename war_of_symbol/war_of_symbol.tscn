@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://batsmq2a7tsa7"]
 
-[ext_resource type="Script" path="res://war_of_symbol/war_of_symbol.gd" id="1_346ir"]
+[ext_resource type="Script" uid="uid://ck0eccfeyj1im" path="res://war_of_symbol/war_of_symbol.gd" id="1_346ir"]
 [ext_resource type="FontFile" uid="uid://bs07gh5npwlpu" path="res://res/font/NoizeSportFreeVertionRegular-MVwye.ttf" id="4_8toha"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_om06s"]
 [ext_resource type="FontFile" uid="uid://b173hv8inhbpa" path="res://res/font/AmericanCaptain-MdEY.otf" id="5_46irp"]
 [ext_resource type="Texture2D" uid="uid://htnetdhbp2y7" path="res://res/timer.png" id="6_1rwhw"]
 [ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="6_h7l32"]
-[ext_resource type="Script" path="res://war_of_symbol/wos_keyboard.gd" id="8_gubft"]
+[ext_resource type="Script" uid="uid://uvc522ct67yu" path="res://war_of_symbol/wos_keyboard.gd" id="8_gubft"]
 [ext_resource type="FontFile" uid="uid://bl0rgt2mgncru" path="res://res/font/good times rg.otf" id="8_pldxw"]
 
 [node name="war_of_symbol" type="Node2D"]

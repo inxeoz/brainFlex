@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bk052m70xhxxn"]
 
-[ext_resource type="Script" path="res://hint_status/Hint_status.gd" id="1_js5c5"]
+[ext_resource type="Script" uid="uid://dnl0idbiqfiwn" path="res://hint_status/Hint_status.gd" id="1_js5c5"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="4_k3jii"]
 
 [node name="hint_status" type="Node2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://32tnej7s1ux7"]
 
-[ext_resource type="Script" path="res://select_mode/select_mode.gd" id="1_ctroj"]
+[ext_resource type="Script" uid="uid://fsqlf36w42bl" path="res://select_mode/select_mode.gd" id="1_ctroj"]
 [ext_resource type="FontFile" uid="uid://trhnjtln4rdp" path="res://res/font/Valorax-lg25V.otf" id="3_oaaas"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="3_xdr4n"]
 

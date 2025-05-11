@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdk7yi2bodgc2"]
 
-[ext_resource type="Script" path="res://profile/profile.gd" id="1_yq4dt"]
+[ext_resource type="Script" uid="uid://rg1y7xj2em18" path="res://profile/profile.gd" id="1_yq4dt"]
 [ext_resource type="FontFile" uid="uid://cfku5f1y213fl" path="res://res/font/EvilEmpire-4BBVK.ttf" id="3_7c3gh"]
 [ext_resource type="FontFile" uid="uid://cyx4rfsvf0sxf" path="res://res/font/NightPumpkind-1GpGv.ttf" id="3_niloq"]
 
